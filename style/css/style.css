@@ -32,15 +32,15 @@ body {
 
 #main {
   width: 73%;
-  height: 600px;
-  min-height: 600px;
+  height: 650px;
+  min-height: 650px;
   float: left;
   margin-bottom: 20px; }
 
 #slider {
   width: 25%;
-  height: 665px;
-  min-height: 665px;
+  height: 715px;
+  min-height: 715px;
   float: right; }
 
 #index-title {
@@ -92,8 +92,12 @@ img {
   font-size: 100%; }
 
 #menu ul li:hover ul li {
-  display: block; }
+  display: block;
+  color: #4a4a4a; }
 
 #menu ul li:hover ul {
   padding-top: 15px;
   background: #e0e0e0; }
+
+#menu ul li:hover, #menu ul li ul li:hover {
+  color: red; }

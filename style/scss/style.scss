@@ -48,13 +48,13 @@ body{
 }
 #main{
 	width:73%;
-	@include height(600px);
+	@include height(650px);
 	float:left;
 	margin-bottom:20px;
 }
 #slider{
 	width:25%;
-	@include height(665px);
+	@include height(715px);
 	float:right;
 	
 	
@@ -114,10 +114,13 @@ img{
 }
 #menu ul li:hover ul li{
 	display:block;
-	
+	color:$menu-color;
 }
 #menu ul li:hover ul{
 	padding-top:15px;
 	background:$menu-backcolor;
 	
+}
+#menu ul li:hover,#menu ul li ul li:hover{
+	color:red;
 }
