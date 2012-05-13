@@ -1,19 +1,16 @@
-<?php include("module/init.php");?>
+<?php include("templ/init.php");$_SESSION["page-title"]="會員管理";?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title>簡訊發送系統</title>
+	<title><?php echo $_SESSION["site-title"]," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");?>
 	
 </head>
 <body>
-	<div id="title">
-		<?php include("templ/title.php"); ?>
-			
-	</div>
+	
 	<div id="body">
-		
+		<div id="title"><a href="index.php"><?php include("templ/title.php"); ?></a></div>
 		<div id="menu">
 			<?php include("templ/menu.php"); ?>
 		</div>

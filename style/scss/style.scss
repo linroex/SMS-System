@@ -2,6 +2,7 @@
 
 $back-color: #99CCCC;
 $body-width: 70%;
+
 $box-color: #4d4d4d;
 $title-color: #4a4a4a;
 $menu-color: #4a4a4a;
@@ -24,36 +25,42 @@ body{
 	@include height(500px);	
 	@include box-center;
 	margin-top:20px;
+	min-width:800px;
 	margin-bottom:20px;
 }
 #title{
+	
 	font-size:300%;
 	line-height:200%;
-	float:left;
 	position:fixed;
-	top:5%;
-	left:10%;
+	left:7%;
+
 	color:$title-color;
+	text-decoration:none;
+	a{
+		color:$title-color;
+	}
 }
 #menu,#main,#slider,.box{
 	border-radius:5px;
 	background:$box-color;
 }
 #menu{
-	width:73%;
+	width:75%;
 	height:50px;
 	
 	margin-bottom:15px;
 	float:left;
 }
 #main{
-	width:73%;
+	width:75%;
 	@include height(650px);
 	float:left;
 	margin-bottom:20px;
+	
 }
 #slider{
-	width:25%;
+	width:22%;
 	@include height(715px);
 	float:right;
 	
@@ -65,6 +72,9 @@ body{
 	text-align:center;
 	color:$title-color;
 	margin-top:20px;
+	a{
+		color:$title-color;	
+	}
 }
 
 .box{
@@ -90,7 +100,8 @@ img{
 	color:$menu-color;
 }
 #menu ul{
-	list-style:none;	
+	list-style:none;
+
 }
 #menu ul li,#menu ul li ul li{
 	float:left;
@@ -103,6 +114,7 @@ img{
 }
 #menu ul li{
 	margin-left:20px;
+	a{color:$menu-color;}
 }
 #menu ul li ul li{
 	display:none;
@@ -115,6 +127,7 @@ img{
 #menu ul li:hover ul li{
 	display:block;
 	color:$menu-color;
+	a{color:$menu-color;}
 }
 #menu ul li:hover ul{
 	padding-top:15px;
@@ -122,5 +135,13 @@ img{
 	
 }
 #menu ul li:hover,#menu ul li ul li:hover{
+	a{color:red;}
 	color:red;
+}
+#main,#slider{
+	a{color:$text-color;}
+	color:$text-color;
+}
+a{
+	text-decoration:none;
 }

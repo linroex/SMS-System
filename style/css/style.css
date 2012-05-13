@@ -9,36 +9,38 @@ body {
   min-height: 500px;
   margin: 0 auto;
   margin-top: 20px;
+  min-width: 800px;
   margin-bottom: 20px; }
 
 #title {
   font-size: 300%;
   line-height: 200%;
-  float: left;
   position: fixed;
-  top: 5%;
-  left: 10%;
-  color: #4a4a4a; }
+  left: 7%;
+  color: #4a4a4a;
+  text-decoration: none; }
+  #title a {
+    color: #4a4a4a; }
 
 #menu, #main, #slider, .box {
   border-radius: 5px;
   background: #4d4d4d; }
 
 #menu {
-  width: 73%;
+  width: 75%;
   height: 50px;
   margin-bottom: 15px;
   float: left; }
 
 #main {
-  width: 73%;
+  width: 75%;
   height: 650px;
   min-height: 650px;
   float: left;
   margin-bottom: 20px; }
 
 #slider {
-  width: 25%;
+  width: 22%;
   height: 715px;
   min-height: 715px;
   float: right; }
@@ -49,6 +51,8 @@ body {
   text-align: center;
   color: #4a4a4a;
   margin-top: 20px; }
+  #index-title a {
+    color: #4a4a4a; }
 
 .box {
   width: 290px;
@@ -83,6 +87,8 @@ img {
 
 #menu ul li {
   margin-left: 20px; }
+  #menu ul li a {
+    color: #4a4a4a; }
 
 #menu ul li ul li {
   display: none;
@@ -94,6 +100,8 @@ img {
 #menu ul li:hover ul li {
   display: block;
   color: #4a4a4a; }
+  #menu ul li:hover ul li a {
+    color: #4a4a4a; }
 
 #menu ul li:hover ul {
   padding-top: 15px;
@@ -101,3 +109,13 @@ img {
 
 #menu ul li:hover, #menu ul li ul li:hover {
   color: red; }
+  #menu ul li:hover a, #menu ul li ul li:hover a {
+    color: red; }
+
+#main, #slider {
+  color: #f5f5f5; }
+  #main a, #slider a {
+    color: #f5f5f5; }
+
+a {
+  text-decoration: none; }
