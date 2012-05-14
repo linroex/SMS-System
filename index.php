@@ -15,6 +15,6 @@
 		<a href="user.php"><div class="box"><p>會員管理</p></div></a>
 		<a href="setting.php"><div class="box"><p>系統管理</p></div></a>
 	</div>
-	
+	<?php echo @$_SESSION['permissions'];unset($_SESSION['permissions'])?>
 </body>
 </html>
