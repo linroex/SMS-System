@@ -27,4 +27,5 @@
 			<li>匯入/匯出</li>
 		</ul>
 	</li>
+	<li><a href="logout.php">登出</a></li>
 </ul>

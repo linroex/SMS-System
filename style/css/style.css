@@ -34,10 +34,11 @@ body {
 
 #main {
   width: 75%;
-  height: 650px;
-  min-height: 650px;
+  height: 610px;
+  min-height: 610px;
   float: left;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding-bottom: 40px; }
 
 #slider {
   width: 22%;
@@ -89,23 +90,21 @@ img {
   margin-left: 20px; }
   #menu ul li a {
     color: #4a4a4a; }
-
-#menu ul li ul li {
-  display: none;
-  position: relative;
-  left: -60px;
-  background: #e0e0e0;
-  font-size: 100%; }
-
-#menu ul li:hover ul li {
-  display: block;
-  color: #4a4a4a; }
-  #menu ul li:hover ul li a {
-    color: #4a4a4a; }
+  #menu ul li ul li {
+    display: none;
+    position: relative;
+    left: -60px;
+    background: #e0e0e0;
+    font-size: 100%; }
 
 #menu ul li:hover ul {
   padding-top: 15px;
   background: #e0e0e0; }
+  #menu ul li:hover ul li {
+    display: block;
+    color: #4a4a4a; }
+    #menu ul li:hover ul li a {
+      color: #4a4a4a; }
 
 #menu ul li:hover, #menu ul li ul li:hover {
   color: red; }
@@ -119,3 +118,56 @@ img {
 
 a {
   text-decoration: none; }
+
+#adduser {
+  width: 450px;
+  margin: 40px auto;
+  line-height: 190%; }
+  #adduser form {
+    margin-top: 30px; }
+    #adduser form #submit {
+      width: 120px;
+      height: 120px;
+      margin-top: 70px;
+      font-size: 180%;
+      border-radius: 7px;
+      float: right;
+      border: 0px; }
+      #adduser form #submit:hover {
+        color: red; }
+
+.title {
+  font-size: 200%;
+  padding-top: 20px; }
+
+.introduce {
+  text-indent: 36px; }
+
+#viewuser {
+  margin-top: 25px; }
+  #viewuser table {
+    width: 80%;
+    margin: 20px auto; }
+  #viewuser tr:hover {
+    color: red; }
+
+#login {
+  width: 450px;
+  text-align: center;
+  margin: 60px auto;
+  padding: 20px;
+  color: #f5f5f5;
+  line-height: 80px;
+  font-size: 200%;
+  background: #4d4d4d;
+  border-radius: 5px; }
+  #login input {
+    font-size: 140%;
+    border-radius: 15px;
+    border: 0px; }
+  #login #submit {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px; }
+    #login #submit:hover {
+      color: red; }

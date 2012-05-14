@@ -1,4 +1,4 @@
-<?php include("templ/init.php");$_SESSION["page-title"]="簡訊系統";?>
+<?php include("templ/init.php");$_SESSION["page-title"]="發送簡訊";?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
@@ -19,7 +19,7 @@
 			<?php include("templ/slider.php"); ?>
 		</div>
 		<div id="main">
-			<?php include("templ/index.php"); ?>
+			
 		</div>
 	</div>
 	

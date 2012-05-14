@@ -19,7 +19,7 @@
 			<?php include("templ/slider.php"); ?>
 		</div>
 		<div id="main">
-			<?php include("templ/index.php"); ?>
+			
 		</div>
 	</div>
 	
