@@ -119,7 +119,7 @@ a {
 
 #adduser {
   width: 450px;
-  margin: 40px auto;
+  margin: 10px auto;
   line-height: 190%; }
   #adduser form {
     margin-top: 30px; }
@@ -136,10 +136,9 @@ a {
 
 .title {
   font-size: 200%;
-  padding-top: 20px; }
-
-.introduce {
-  text-indent: 36px; }
+  margin-top: 20px;
+  width: 100%;
+  text-align: center; }
 
 #viewuser {
   margin-top: 25px; }
@@ -173,3 +172,8 @@ a {
 #edit-user {
   width: 350px;
   margin: 30px auto; }
+  #edit-user #submit {
+    width: 150px;
+    height: 70px;
+    font-size: 200%;
+    margin-top: 10px; }

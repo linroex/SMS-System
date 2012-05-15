@@ -149,7 +149,7 @@ a{
 }
 #adduser {
 	width:450px;
-	margin:40px auto;
+	margin:10px auto;
 	line-height:190%;
 	
 	form{
@@ -172,11 +172,11 @@ a{
 }
 .title{
 	font-size:200%;
-	padding-top:20px;
+	margin-top:20px;
+	width:100%;
+	text-align:center;
 }
-.introduce{
-	text-indent:36px;
-}
+
 #viewuser{
 	table{
 		width:80%;
@@ -217,5 +217,10 @@ a{
 }#edit-user{
 	width:350px;
 	margin:30px auto;
-	
+	#submit{
+		width:150px;
+		height:70px;
+		font-size:200%;
+		margin-top:10px;
+	}
 }

@@ -24,8 +24,9 @@
 			<?php include("templ/slider.php"); ?>
 		</div>
 		<div id="main">
+			<div class="title">檢視會員</div>
 			<div id="viewuser">
-				<span class="title"><center>檢視會員</center></span>
+				
 				<table>
 					
 					<tr>

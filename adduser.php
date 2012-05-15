@@ -24,9 +24,9 @@
 			<?php include("templ/slider.php"); ?>
 		</div>
 		<div id="main">
+			<div class="title">新增用戶</div>
 			<div id="adduser">
-				<span class="title"><center>新增用戶</center></span>
-				
+
 					<ul>
 						<li>帳號至少5個字，密碼至少8個字長</li>
 						<li>使用者分為兩種等級：一種是普通用戶，只能使用簡訊系統、通訊錄，另一種是管理用戶，可以使用所有功能，包含新增用戶</li>
@@ -34,8 +34,6 @@
 						<li>每日傳送上限可以設定該用戶每日可以傳送多少封簡訊，不設定則留空</li>
 						<li>管理用戶無需設定寄送上限</li>
 					</ul>
-					
-				
 				
 				<form action="module/adduser.php" method="post">
 					<table>

@@ -24,9 +24,8 @@
 			<?php include("templ/slider.php"); ?>
 		</div>
 		<div id="main">
+			<div class="title">用戶資料編輯</div>
 			<div id="edit-user">
-				<span class="title"><center>用戶資料編輯</center></span>
-				
 				<ul>
 					<li>如果沒有要修改密碼，則「新密碼、再輸入一次」兩欄留空</li>
 					<li>要刪除用戶的話請把「移除」打勾，否則請打勾「不移除」</li>
@@ -95,7 +94,7 @@
 						}
 						
 					?>
-					<input id="submit" type="submit" value="送出" />
+					<tr><td colspan="2" align="center"><input id="submit" type="submit" value="送出" /></td><td></td></tr>
 					</table>
 				</form>
 			</div>
