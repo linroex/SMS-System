@@ -19,8 +19,8 @@
 				}
 			?>
 			<form action="module/login.php" method="post">
-				<p>帳號：<input type="text" name="usernm" id="" size="10"/><br />
-				密碼：<input type="password" name="passwd" id="" size="10"/></p>
+				<p>帳號：<input type="text" name="usernm" size="10" required/><br />
+				密碼：<input type="password" name="passwd" size="10" required/></p>
 				<input type="submit" value="登入" id="submit" align="right"/>
 			</form>
 		</div>

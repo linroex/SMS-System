@@ -7,9 +7,9 @@
 	</li>
 	<li><a href="setting.php">系統設定</a>
 		<ul>
-			<li>基本設定</li>
-			<li>版面設定</li>
-			<li>其他設定</li>
+			<li>資料庫</li>
+			<li>簡訊設定</li>
+			<li>網站設定</li>
 			
 		</ul>
 	</li>

@@ -39,31 +39,31 @@
 					<table>
 						<tr>
 							<td>暱稱：</td>
-							<td><input type="text" name="nickname" id="" /></td>
+							<td><input type="text" name="nickname" required/></td>
 						</tr>
 						<tr>
 							<td>帳號:</td>
-							<td><input type="text" name="username" id="" /></td>
+							<td><input type="text" name="username" required/></td>
 						</tr>
 						<tr>
 							<td>密碼:</td>
-							<td><input type="password" name="passwd" id="" /></td>
+							<td><input type="password" name="passwd" required/></td>
 						</tr>
 						<tr>
 							<td>在輸入密碼:</td>
-							<td><input type="password" name="sec_passwd" id="" /></td>
+							<td><input type="password" name="sec_passwd" required/></td>
 						</tr>
 						<tr>
 							<td>信箱：</td>
-							<td><input type="text" name="email" id="" /></td>
+							<td><input type="email" name="email" required/></td>
 						</tr>
 						<tr>
 							<td>每日傳送上限:</td>
-							<td><input type="text" name="sms_limit_day" id="" /></td>
+							<td><input type="number" name="sms_limit_day" min="0"/></td>
 						</tr>
 						<tr>
 							<td>總額度上限:</td>
-							<td><input type="text" name="sms_limit_total" id="" /></td>
+							<td><input type="number" name="sms_limit_total" min="0"/></td>
 						</tr>
 						<tr>
 							<td>等級</td>

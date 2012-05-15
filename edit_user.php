@@ -40,6 +40,7 @@
 						if($users->findOne(array("usernm"=>$_GET["usernm"]))!=NULL){
 							$userinfo=$users->findOne(array("usernm"=>$_GET["usernm"]));
 							$another_level=$userinfo["level"]=="normal"?"admin":"normal";
+							$input_disabled=$_SESSION["user-info"]["level"]=="normal"?' disabled="true"':"";
 							if(isset($_SESSION['edit_user_status'])){
 								echo $_SESSION['edit_user_status'];
 								unset($_SESSION['edit_user_status']);
@@ -48,7 +49,7 @@
 							<input type=\"hidden\" name=\"_id\" value=\"{$userinfo["_id"]}\" />
 							<tr>
 								<td>帳號：</td>
-								<td><input name=\"usernm\" type=\"text\" value=\"{$userinfo["usernm"]}\"/></td>
+								<td><input name=\"usernm\" type=\"text\" value=\"{$userinfo["usernm"]}\" required/></td>
 							</tr>
 							<tr>
 								<td>新密碼：</td>
@@ -60,19 +61,19 @@
 							</tr>
 							<tr>
 								<td>暱稱：</td>
-								<td><input type=\"text\" value=\"{$userinfo["nickname"]}\" name=\"new_nickname\"/></td>
+								<td><input type=\"text\" value=\"{$userinfo["nickname"]}\" name=\"new_nickname\" required/></td>
 							</tr>
 							<tr>
 								<td>信箱：</td>
-								<td><input type=\"text\" value=\"{$userinfo["email"]}\" name=\"new_email\"/></td>
+								<td><input type=\"email\" value=\"{$userinfo["email"]}\" name=\"new_email\" required/></td>
 							</tr>
 							<tr>
 								<td>每日限制：</td>
-								<td><input type=\"text\" value=\"{$userinfo["day_limit"]}\" name=\"new_day_limit\"/></td>
+								<td><input type=\"number\" value=\"{$userinfo["day_limit"]}\" name=\"new_day_limit\" min=\"0\" $input_disabled /></td>
 							</tr>
 							<tr>
 								<td>總額度限制：</td>
-								<td><input type=\"text\" value=\"{$userinfo["total_limit"]}\" name=\"new_total_limit\"/></td>
+								<td><input type=\"number\" value=\"{$userinfo["total_limit"]}\" name=\"new_total_limit\" min=\"0\" $input_disabled /></td>
 							</tr>
 							<tr>
 								<td>等級：</td>

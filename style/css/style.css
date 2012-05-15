@@ -177,3 +177,9 @@ a {
     height: 70px;
     font-size: 200%;
     margin-top: 10px; }
+
+#setting {
+  width: 60%;
+  margin: 10px auto; }
+  #setting hr {
+    border: 1px solid #BEBEBE; }
