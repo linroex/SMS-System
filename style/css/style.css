@@ -5,16 +5,15 @@ body {
 
 #body {
   width: 70%;
-  height: 500px;
   min-height: 500px;
   margin: 0 auto;
   margin-top: 20px;
-  min-width: 800px;
+  min-width: 850px;
   margin-bottom: 20px; }
 
 #title {
   font-size: 300%;
-  line-height: 200%;
+  line-height: 180%;
   position: fixed;
   left: 7%;
   color: #4a4a4a;
@@ -28,22 +27,21 @@ body {
 
 #menu {
   width: 75%;
+  min-width: 650px;
   height: 50px;
   margin-bottom: 15px;
   float: left; }
 
 #main {
   width: 75%;
-  height: 610px;
-  min-height: 610px;
+  min-height: 630px;
   float: left;
   margin-bottom: 20px;
-  padding-bottom: 40px; }
+  min-width: 650px; }
 
 #slider {
   width: 22%;
-  height: 715px;
-  min-height: 715px;
+  min-height: 695px;
   float: right; }
 
 #index-title {
@@ -81,9 +79,9 @@ img {
 
 #menu ul li, #menu ul li ul li {
   float: left;
-  width: 120px;
+  width: 100px;
   height: 40px;
-  font-size: 140%;
+  font-size: 130%;
   text-align: center; }
 
 #menu ul li {
@@ -171,3 +169,7 @@ a {
     margin-bottom: 20px; }
     #login #submit:hover {
       color: red; }
+
+#edit-user {
+  width: 350px;
+  margin: 30px auto; }

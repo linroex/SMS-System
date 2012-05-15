@@ -7,5 +7,6 @@
 	}else{
 		$mongo=new Mongo("mongodb://{$_SQL["usernm"]}:{$_SQL["passwd"]}@{$_SQL["address"]}");
 	}
-	
+	$smsdb=$mongo->sms_system;
+	$users=$smsdb->users;
 ?>

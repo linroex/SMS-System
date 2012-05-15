@@ -5,7 +5,12 @@
 	<meta charset="UTF-8">
 	<title><?php echo $_SESSION["site-title"]," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");?>
-	
+	<?php 
+		if(isset($_SESSION['edit_user_status'])){
+			echo $_SESSION['edit_user_status'];
+			unset($_SESSION['edit_user_status']);
+		}
+	?>
 </head>
 <body>
 	
@@ -34,11 +39,11 @@
 					</tr>
 				<?php 
 					include("module/sql.php");
-					$users=$mongo->sms_system->users;
+					
 					$result=$users->find();
 					foreach($result as $temp){
 						echo "<tr>
-							<td><a href=\"\">[編輯]</a></td>
+							<td><a href=\"edit_user.php?usernm={$temp['usernm']}\">[編輯]</a></td>
 							<td>{$temp['nickname']}</td>
 							<td>{$temp['usernm']}</td>
 							<td>{$temp['email']}</td>

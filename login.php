@@ -1,4 +1,4 @@
-<?php include("templ/init.php");$_SESSION["page-title"]="";?>
+<?php include("templ/init.php");$_SESSION["page-title"]="登入";?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
