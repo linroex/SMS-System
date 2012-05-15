@@ -1,7 +1,6 @@
 <?php 
-	$_SQL["usernm"]="";
-	$_SQL["passwd"]="";
-	$_SQL["address"]="localhost";
+	include("sql_info.php");
+	
 	if(trim($_SQL["usernm"])=="" or trim($_SQL["passwd"])==""){
 		$mongo=new Mongo($_SQL["address"]);
 	}else{

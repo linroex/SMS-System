@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?php echo $_SESSION["site-title"]," | ",@$_SESSION["page-title"]; ?></title>
-	<?php include("templ/head.php");?>
+	<?php include("templ/head.php");include("module/sql_info.php");?>
 	
 </head>
 <body>
@@ -26,15 +26,15 @@
 					<table>
 						<tr>
 							<td>資料庫帳號：</td>
-							<td><input type="text" name="sql_username" /></td>
+							<td><input type="text" name="sql_username" value="<?=$_SQL["usernm"]; ?>"/></td>
 						</tr>
 						<tr>
 							<td>資料庫密碼：</td>
-							<td><input type="password" name="sql_password" /></td>
+							<td><input type="password" name="sql_password" value="<?=$_SQL["passwd"]; ?>"/></td>
 						</tr>
 						<tr>
 							<td>資料庫位址：</td>
-							<td><input type="text" name="sql_address" /></td>
+							<td><input type="text" name="sql_address" value="<?=$_SQL["address"]; ?>"/></td>
 						</tr>
 					</table>
 					<hr />
@@ -55,7 +55,7 @@
 					<table>
 						<tr>
 							<td>網站名稱：</td>
-							<td><input type="text" name="site_name" required/></td>
+							<td><input type="text" name="site_name" /></td>
 						</tr>
 						<tr>
 							<td>錯誤上限：</td>
