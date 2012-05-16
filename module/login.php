@@ -10,9 +10,19 @@
 		header("location:../index.php");
 
 	}else{
-		$_SESSION["login-status"]="帳號或密碼錯誤";
+		if($_SESSION["setting"]["login_error_limit"]!=-1){
+			if($_SESSION["setting"]["login_error_limit"]>0){
+				$_SESSION["setting"]['login_error_limit']-=1;
+				$_SESSION["login-status"]="帳號或密碼錯誤，你還有{$_SESSION["setting"]["login_error_limit"]}次機會";
+				
+			}else{
+				$_SESSION["login-status"]="登入錯誤超過限制次數，20分鐘內不能再次登入";
+			}
+		}
+		
 		header("location:../login.php");
+		
 	}
-	
+
 	
 ?>

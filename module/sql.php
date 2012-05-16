@@ -1,6 +1,7 @@
 <?php 
 	include("sql_info.php");
 	
+	
 	if(trim($_SQL["usernm"])=="" or trim($_SQL["passwd"])==""){
 		$mongo=new Mongo($_SQL["address"]);
 	}else{
@@ -8,4 +9,7 @@
 	}
 	$smsdb=$mongo->sms_system;
 	$users=$smsdb->users;
+	$_db_setting=$smsdb->setting;
+	
+
 ?>

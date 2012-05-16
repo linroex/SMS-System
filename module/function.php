@@ -1,5 +1,5 @@
 <?php
-function process_user_info($usernm,$passwd,$nickname,$email,$total_limit="",$day_limit="",$level=normal){
+	function process_user_info($usernm,$passwd,$nickname,$email,$total_limit="",$day_limit="",$level=normal){
 		$user_info=array($usernm,$passwd,$nickname,$email,$total_limit,$day_limit,$level);
 		for($i=0;$i<count($user_info);$i++){
 			$user_info[$i]=trim($user_info[$i]);
@@ -17,6 +17,27 @@ function process_user_info($usernm,$passwd,$nickname,$email,$total_limit="",$day
 		}
 		if($result==""){
 			return $user_info;
+		}else{
+			return $result;
+		}
+			
+	}
+	function setting_check_info($smsname,$smspasswd,$sitename,$errorlimit=-1,$captcha=false){
+			
+		$result=array();
+		$i=0;
+		
+		foreach(array($smsname,$smspasswd,$sitename,$errorlimit,$captcha) as $temp){
+			$result[$i]=trim($temp);
+			$i++;
+		}
+		if($result[2]==''){
+			$result[2]='簡訊發送系統';
+		}
+		if($result[0]=='' or $result[1]==''){
+			return '簡訊服務帳號或密碼沒有設定';
+		}elseif($result[3]<-1){
+			return '錯誤次數限制不得小於0';
 		}else{
 			return $result;
 		}

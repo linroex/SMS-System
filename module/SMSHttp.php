@@ -75,11 +75,12 @@ class SMSHttp{
 		$header .= $postData . "\r\n";
 		
 		fputs($fp, $header, strlen($header));
+		$res="";
 		while (!feof($fp)) {
 			$res .= fgets($fp, 1024);
 		}
 		fclose($fp);
-		$strArray = split("\r\n\r\n", $res);
+		$strArray = explode("\r\n\r\n", $res);
 		$result = $strArray[1];
         	return $result;
 	}

@@ -18,10 +18,14 @@
 				
 				$old_passwd=$users->findOne(array("_id"=>$_id));
 				$info[1]=$info[1]=="########"?$old_passwd["passwd"]:$info[1];
+				$sms=new SMSHttp;
+				$sms->getCredit($_SESSION["setting"]['sms_username'],$_SESSION["setting"]['sms_password']);
 				
-				if($users->update(array("_id"=>$_id),array('$set'=>array("usernm"=>$info[0],"passwd"=>md5($info[1]),"nickname"=>$info[2],"email"=>$info[3],"day_limit"=>$info[5],"total_limit"=>$info[4],"level"=>$info[6])))){
+				if($users->update(array("_id"=>$_id),array('$set'=>array("usernm"=>$info[0],"passwd"=>md5($info[1]),"nickname"=>$info[2],"email"=>$info[3],"day_limit"=>(int)$info[5],"total_limit"=>(int)$info[4],"level"=>$info[6])))){
 					@$_SESSION['edit_user_status']='<script type="text/javascript">alert("修改成功！！");</script>';
 				}	
+				
+					
 			}else{
 				
 				@$_SESSION['edit_user_status']='<script type="text/javascript">alert("' . $info .  ' ");</script>';

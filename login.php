@@ -3,14 +3,14 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title><?php echo $_SESSION["site-title"]," | ",@$_SESSION["page-title"]; ?></title>
+	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");?>
 	
 </head>
 <body>
 	
 	<div id="body">
-		<div id="index-title"><a href="index.php"><?php echo $_SESSION["site-title"]; ?></a></div>
+		<div id="index-title"><a href="index.php"><?php echo $_SESSION["setting"]['site_name']; ?></a></div>
 		<div id="login">
 			<?php 
 				if(isset($_SESSION["login-status"])){

@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title><?php echo $_SESSION["site-title"]," | ",@$_SESSION["page-title"]; ?></title>
+	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");?>
 </head>
 <body>

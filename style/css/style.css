@@ -183,3 +183,6 @@ a {
   margin: 10px auto; }
   #setting hr {
     border: 1px solid #BEBEBE; }
+
+.warning {
+  color: red; }
