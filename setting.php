@@ -28,6 +28,8 @@
 				}
 			?>
 			<div id="setting">
+				
+				<a target="_blank" href="module/credit_count.php"><input type="button" value="手動計算可用點數"/></a>
 				<form action="module/setting.php" method="post">
 					<p>一、簡訊設定<br />(本系統使用Every8D提供的API進行簡訊傳送服務)</p>
 					<table>

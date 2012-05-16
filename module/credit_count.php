@@ -11,4 +11,5 @@
 	}
 	
 	$_db_setting->update(array('check'=>'999'),array('$set'=>array('total_credit'=>$sms->credit-$total_decrease)));
+	
 ?>

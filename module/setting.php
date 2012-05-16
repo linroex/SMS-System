@@ -8,7 +8,7 @@
 	$sms=new SMSHttp;
 		
 	if($_db_setting->update(array('check'=>'999'),array('$set'=>array('sms_username'=>$setting_info[0],'sms_password'=>$setting_info[1],'site_name'=>$setting_info[2],'login_error_limit'=>$setting_info[3],'captcha'=>$setting_info[4])))){
-		
+		include("credit_count.php");
 		$_SESSION['setting_result']='<script type="text/javascript">alert("設定修改成功");</script>';	
 		$setting=$_db_setting->findOne();
 		$_SESSION["setting"]=$setting;
