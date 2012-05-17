@@ -10,9 +10,19 @@
 			
 		}else{
 			
-			if($users->insert(array("nickname"=>$info[2],"usernm"=>$info[0],"passwd"=>md5($info[1]),"email"=>$info[3],"day_limit"=>(int)$info[5],"total_limit"=>(int)$info[4],"level"=>$info[6]))){
+			
+				if($info[4]<=$_SESSION['setting']['total_credit']){
+				$users->insert(array("nickname"=>$info[2],"usernm"=>$info[0],"passwd"=>$info[1],"email"=>$info[3],"day_limit"=>$info[5],"total_limit"=>$info[4],"level"=>$info[6]));
 				$_SESSION["adduser_result"]="帳號{$info[0]}新增成功";	
-			}
+				$_db_setting->update(array('check'=>'999'),array('$set'=>array('total_credit'=>$_SESSION['setting']['total_credit']-$info[4])));
+				$_SESSION['setting']['total_credit']-=$info[4];	
+				
+					
+				}else{
+					$_SESSION["adduser_result"]="系統剩餘點數不足";	
+				}
+				
+			
 
 		}
 	}else{

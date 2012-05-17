@@ -56,7 +56,7 @@
 						</tr>
 						<tr>
 							<td>錯誤上限：</td>
-							<td><input type="number" name="login_error_limit" min="0" value="<?=$setting['login_error_limit']?>"/></td>
+							<td><input type="number" name="login_error_limit" min="-1" value="<?=$setting['login_error_limit']?>"/></td>
 						</tr>
 						<tr>
 							<td>是否顯示驗證碼：</td>

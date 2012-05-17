@@ -6,16 +6,16 @@
 		}
 		$result="";
 		if(strlen($user_info[0])<5 or strlen($user_info[1])<8){
-			$result.="帳號或密碼不符合要求、";
+			$result.="帳號或密碼不符合要求  ";
 		}
 		if($user_info[2]=="" or $user_info[3]==""){
-			$result.="暱稱及信箱不得為空";
+			$result.="暱稱及信箱不得為空  ";
 		}
-		if($user_info[6]=="admin"){
-			$user_info[4]="";
-			$user_info[5]="";
-		}
+		
 		if($result==""){
+			$user_info[4]=(int)$user_info[4];
+			$user_info[5]=(int)$user_info[5];
+			$user_info[1]=md5($user_info[1]);
 			return $user_info;
 		}else{
 			return $result;

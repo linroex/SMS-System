@@ -4,10 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<?php
-		include("module/sql.php"); 
-		$setting=$_db_setting->findOne();
-		$_SESSION["setting"]=$setting;
-		
+		include("module/sql.php"); 		
 	?>
 	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");?>
