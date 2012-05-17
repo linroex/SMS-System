@@ -62,7 +62,7 @@
 							<td><input type="number" name="sms_limit_day" min="0"/></td>
 						</tr>
 						<tr>
-							<td>總額度上限:<?=$_SESSION['setting']['total_credit'] ?></td>
+							<td>總額度上限:(剩餘：<?=$_SESSION['setting']['total_credit'] ?>)</td>
 							<td><input type="number" name="sms_limit_total" min="0"/></td>
 						</tr>
 						<tr>
