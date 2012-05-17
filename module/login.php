@@ -18,6 +18,8 @@
 			}else{
 				$_SESSION["login-status"]="登入錯誤超過限制次數，20分鐘內不能再次登入";
 			}
+		}else{
+			$_SESSION["login-status"]="帳號或密碼錯誤";
 		}
 		
 		header("location:../login.php");
