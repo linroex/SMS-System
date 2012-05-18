@@ -58,11 +58,7 @@
 							<td>錯誤上限：</td>
 							<td><input type="number" name="login_error_limit" min="-1" value="<?=$setting['login_error_limit']?>"/></td>
 						</tr>
-						<tr>
-							<td>是否顯示驗證碼：</td>
-							<td><select name="captcha"><option value="true">顯示</option>
-							<option value="false">不顯示</option></select></td>
-						</tr>
+						
 					</table>
 					<input type="submit" value="儲存設定"/>
 				</form>
