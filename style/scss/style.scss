@@ -147,7 +147,7 @@ img{
 a{
 	text-decoration:none;
 }
-#adduser {
+#adduser{
 	width:450px;
 	margin:10px auto;
 	line-height:190%;
@@ -159,6 +159,7 @@ a{
 			width:120px;
 			height:120px;
 			margin-top:70px;
+			margin-left:20px;
 			font-size:180%;
 			border-radius:7px;
 			float:right;
@@ -214,7 +215,7 @@ a{
 		}
 		margin-bottom:20px;
 	}
-}#edit-user{
+}#edit-user,#addcontact{
 	width:350px;
 	margin:30px auto;
 	#submit{
@@ -222,6 +223,8 @@ a{
 		height:70px;
 		font-size:200%;
 		margin-top:10px;
+		border-radius:5px;
+		border:0px;
 	}
 }
 #setting{

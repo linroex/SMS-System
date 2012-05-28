@@ -8,6 +8,8 @@
 	}
 	$smsdb=$mongo->sms_system;
 	$users=$smsdb->users;
+	$group=$smsdb->group;
+	$contact=$smsdb->contact;
 	$_db_setting=$smsdb->setting;
 	$setting=$_db_setting->findOne();
 	$_SESSION["setting"]=$setting;

@@ -127,6 +127,7 @@ a {
       width: 120px;
       height: 120px;
       margin-top: 70px;
+      margin-left: 20px;
       font-size: 180%;
       border-radius: 7px;
       float: right;
@@ -169,14 +170,16 @@ a {
     #login #submit:hover {
       color: red; }
 
-#edit-user {
+#edit-user, #addcontact {
   width: 350px;
   margin: 30px auto; }
-  #edit-user #submit {
+  #edit-user #submit, #addcontact #submit {
     width: 150px;
     height: 70px;
     font-size: 200%;
-    margin-top: 10px; }
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 0px; }
 
 #setting {
   width: 60%;

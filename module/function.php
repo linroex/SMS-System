@@ -22,6 +22,7 @@
 		}
 			
 	}
+	
 	function setting_check_info($smsname,$smspasswd,$sitename,$errorlimit=-1,$captcha=false){
 			
 		$result=array();
@@ -44,4 +45,25 @@
 		
 	}
 	
+	function contact_info_check($name,$nickname,$email,$phone,$group="未分類",$notice=""){
+		$result=array();
+		$i=0;
+		$group=@implode(",",$group);
+		foreach(array($name,$nickname,$email,$phone,$group,$notice) as $temp){
+			$result[$i]=trim($temp);
+			$i++;
+		}
+		
+		if($result[4]==''){
+			$result[4]='未分類';
+		}
+		$result[4]=@explode(',',$result[4]);
+		if($result[0]=="" or $result[3]==""){
+			return '姓名或手機號碼為空';
+		}else if(!is_numeric($result[3])){
+			return '手機號碼有誤';
+		}else{
+			return $result;
+		}
+	}
 ?>

@@ -7,7 +7,7 @@
 	</li>
 	<li>通訊錄
 		<ul>
-			<li>新增</li>
+			<li><a href="addcontact.php">新增</a></li>
 			<li>檢視</li>
 			<li>群組</li>
 			<li>匯入/匯出</li>
