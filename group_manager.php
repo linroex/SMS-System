@@ -23,8 +23,8 @@
 			<form action="module/group.php" method="post">
 				<table id="group_manager">
 					<tr>
-						<td>群組名稱：</td>
-						<td><input type="text" name="group_name" value="<?php echo (isset($_GET['oldname']) and isset($_GET['edit_group']) and $_GET['edit_group']=='true')?$_GET['oldname']:'';?>" <?php echo (isset($_GET['edit_group']) and $_GET['edit_group']=='true')?'readonly':'required';?>/></td>
+						<td style="width:30%;">群組名稱：</td>
+						<td style="width:70%;"><input type="text" name="group_name" value="<?php echo (isset($_GET['oldname']) and isset($_GET['edit_group']) and $_GET['edit_group']=='true')?$_GET['oldname']:'';?>" <?php echo (isset($_GET['edit_group']) and $_GET['edit_group']=='true')?'readonly':'required';?>/></td>
 					</tr>
 					<tr>
 						<td>群組成員</td>
@@ -46,6 +46,10 @@
 					<tr>
 						<td>群組介紹：</td>
 						<td><textarea name="group_note"cols="20" rows="5"><?php echo (isset($_GET['edit_group']) and $_GET['edit_group']=='true' and isset($_GET['oldnote']))?$_GET['oldnote']:'';?></textarea></td>
+					</tr>
+					<tr>
+						<td>移除此群組：</td>
+						<td>[移除<input type="radio" name="del_group" value="true"/>][不移除<input type="radio" name="del_group" value="false" checked/>]</td>
 					</tr>
 					<input type="hidden" name="check" value="<?php echo (isset($_GET['edit_group']) and $_GET['edit_group']=='true')?'true':"false";?>" />
 					
