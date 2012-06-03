@@ -45,7 +45,7 @@
 		
 	}
 	
-	function contact_info_check($name,$nickname,$email,$phone,$group="未分類",$notice=""){
+	function contact_info_check($name,$nickname,$email,$phone,$group,$notice=""){
 		$result=array();
 		$i=0;
 		$group=@implode(",",$group);
@@ -57,7 +57,10 @@
 		if($result[4]==''){
 			$result[4]='未分類';
 		}
-		$result[4]=@explode(',',$result[4]);
+		if(mb_strstr($result[4],',')){
+			$result[4]=@explode(',',$result[4]);	
+		}
+		
 		if($result[0]=="" or $result[3]==""){
 			return '姓名或手機號碼為空';
 		}else if(!is_numeric($result[3])){

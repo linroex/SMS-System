@@ -20,6 +20,11 @@
 		</div>
 		<div id="main">
 			<a href="group_manager.php">新增群組請按我</a>
+			<?php 
+				if(isset($_SESSION['edit_group_message'])){
+					echo '<script type="text/javascript">alert("' . $_SESSION['edit_group_message'] . '")</script>';
+				}
+			?>
 		</div>
 	</div>
 	

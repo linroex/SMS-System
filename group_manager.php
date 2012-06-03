@@ -24,27 +24,31 @@
 				<table id="group_manager">
 					<tr>
 						<td>群組名稱：</td>
-						<td><input type="text" name="group_name" value="<?php (isset($_GET['oldname']) and isset($_GET['edit_group']) and $_GET['edit_group']=='true')?$_GET['oldname']:'';?>" required/></td>
+						<td><input type="text" name="group_name" value="<?php echo (isset($_GET['oldname']) and isset($_GET['edit_group']) and $_GET['edit_group']=='true')?$_GET['oldname']:'';?>" <?php echo (isset($_GET['edit_group']) and $_GET['edit_group']=='true')?'readonly':'required';?>/></td>
 					</tr>
 					<tr>
 						<td>群組成員</td>
 						<td>
 							<?php 
+								$checked_count=0;
 								foreach($contact->find() as $temp){
-									if(@in_array($_GET['oldname'],$temp['group'])){
+									if(@mb_strstr(is_array($temp['group'])?implode(',',$temp['group']):$temp['group'],$_GET['oldname'])){
 										echo '<input type="checkbox" name="group_member[]" value="'. $temp['name'] .'" checked/>' . $temp['name'] . '&nbsp&nbsp&nbsp';
+										$checked_count+=1;
 									}else{
 										echo '<input type="checkbox" name="group_member[]" value="'. $temp['name'] .'"/>' . $temp['name'] . '&nbsp&nbsp&nbsp';
 									}
 								}
+								$_SESSION['checked_count']=$checked_count;
 							?>
 						</td>
 					</tr>
 					<tr>
 						<td>群組介紹：</td>
-						<td><textarea name="group_note"cols="20" rows="5"><?php (isset($_GET['edit_group']) and $_GET['edit_group']=='true' and isset($_GET['oldnote']))?$_GET['oldnote']:'';?></textarea></td>
+						<td><textarea name="group_note"cols="20" rows="5"><?php echo (isset($_GET['edit_group']) and $_GET['edit_group']=='true' and isset($_GET['oldnote']))?$_GET['oldnote']:'';?></textarea></td>
 					</tr>
 					<input type="hidden" name="check" value="<?php echo (isset($_GET['edit_group']) and $_GET['edit_group']=='true')?'true':"false";?>" />
+					
 					<tr><td colspan=2><center><input type="submit" id="submit" value="送出"/></center></td><td></td></tr>
 				</table>
 				

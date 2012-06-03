@@ -2,7 +2,7 @@
 	include("sql.php");
 	include("../templ/init.php");
 	include("function.php");
-	if($_POST['group']=NULL){
+	if($_POST['group']==NULL){
 		$_POST['group']='';
 	}
 	$info=contact_info_check($_POST['name'],$_POST['nickname'],$_POST['email'],$_POST['phone'],$_POST['group'],$_POST['notice']);
