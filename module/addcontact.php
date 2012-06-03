@@ -6,6 +6,15 @@
 		$_POST['group']='';
 	}
 	$info=contact_info_check($_POST['name'],$_POST['nickname'],$_POST['email'],$_POST['phone'],$_POST['group'],$_POST['notice']);
-	//$contact->insert(array());
-	var_dump($info);
+	if($contact->findOne(array('name'=>$info[0]))==NULL){
+		if($contact->insert(array('name'=>$info[0],'nickname'=>$info[1],'email'=>$info[2],'phone'=>$info[3],'group'=>$info[4],'notice'=>$info[5]))){
+			$_SESSION['add_contact_message']='新增聯絡人成功';
+		}else{
+			$_SESSION['add_contact_message']='失敗：'.$info;
+		}
+	}else{
+		$_SESSION['add_contact_message']='已有同名稱聯絡人';
+	}
+	header("Location:../addcontact.php");
+	
 ?>

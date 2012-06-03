@@ -55,6 +55,12 @@
 						</tr>
 					</table>
 					<center><input type="submit" value="送出" id="submit" /></center>
+					<?php 
+						if(isset($_SESSION['add_contact_message'])){
+							echo '<script type="text/javascript">alert("'. $_SESSION['add_contact_message'] .'")</script>';
+							unset($_SESSION['add_contact_message']);
+						}
+					?>
 				</form>
 			</div>
 		</div>
