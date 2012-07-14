@@ -6,6 +6,7 @@
 	$login=$users->findOne(array("usernm"=>$_POST["usernm"]));
 	
 	if(md5(trim($_POST["passwd"]))==$login["passwd"]){
+		
 		$_SESSION["user-info"]=$login;
 		$_SESSION["login-status"]=1;
 		header("location:../index.php");

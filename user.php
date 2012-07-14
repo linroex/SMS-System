@@ -34,7 +34,7 @@
 						<td>暱稱</td>
 						<td>帳號</td>
 						<td>信箱</td>
-						<td>每日限制</td>
+						
 						<td>剩餘點數</td>
 						<td>等級</td>
 					</tr>
@@ -48,7 +48,7 @@
 							<td>{$temp['nickname']}</td>
 							<td>{$temp['usernm']}</td>
 							<td>{$temp['email']}</td>
-							<td>{$temp['day_limit']}</td>
+							
 							<td>{$temp['total_limit']}</td>
 							<td>{$temp['level']}</td>
 						</tr>";

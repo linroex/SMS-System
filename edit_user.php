@@ -67,12 +67,9 @@
 								<td>信箱：</td>
 								<td><input type=\"email\" value=\"{$userinfo["email"]}\" name=\"new_email\" required/></td>
 							</tr>
+							
 							<tr>
-								<td>每日限制：</td>
-								<td><input type=\"number\" value=\"{$userinfo["day_limit"]}\" name=\"new_day_limit\" min=\"0\" /></td>
-							</tr>
-							<tr>
-								<td>總額度限制：(剩餘：{$_SESSION['setting']['total_credit']})</td>
+								<td>總額度限制：<br />(剩餘：{$_SESSION['setting']['total_credit']})</td>
 								<td><input type=\"number\" value=\"{$userinfo["total_limit"]}\" name=\"new_total_limit\" min=\"0\" /></td>
 							</tr>
 							<tr>

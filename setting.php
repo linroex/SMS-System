@@ -31,15 +31,21 @@
 				
 				<a target="_blank" href="module/credit_count.php"><input type="button" value="手動計算可用點數"/></a>
 				<form action="module/setting.php" method="post">
-					<p>一、簡訊設定<br />(本系統使用Every8D提供的API進行簡訊傳送服務)</p>
+					
+					<p>一、簡訊設定<br />(本系統使用Nexom提供的API進行簡訊傳送服務)</p>
+					<p>發送者限制使用英文、數字</p>
 					<table>
 						<tr>
-							<td>簡訊帳號：</td>
+							<td>API Key：*</td>
 							<td><input type="text" name="sms_username" value="<?=$setting['sms_username']?>" required/></td>
 						</tr>
 						<tr>
-							<td>簡訊密碼：</td>
+							<td>API Secret：*</td>
 							<td><input type="password" name="sms_password" value="<?=$setting['sms_password']?>" required/></td>
+						</tr>
+						<tr>
+							<td>發送者：*</td>
+							<td><input type="text" name="sms_from" value="<?=$setting['sms_from']?>" required/></td>
 						</tr>
 						<center class="warning"><?php 
 							if(isset($_SESSION['setting_sms_error'])){

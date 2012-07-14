@@ -30,9 +30,10 @@
 					<ul>
 						<li>帳號至少5個字，密碼至少8個字長</li>
 						<li>使用者分為兩種等級：一種是普通用戶，只能使用簡訊系統、通訊錄，另一種是管理用戶，可以使用所有功能，包含新增用戶</li>
-						<li>總額度上限可以讓你設定該用戶最多可以發送多少封簡訊,每發送一封簡訊則減少1點，不設定則留空</li>
-						<li>每日傳送上限可以設定該用戶每日可以傳送多少封簡訊，不設定則留空</li>
+						<li>總額度上限可以讓你設定該用戶最多可以發送多少封簡訊,每發送一封簡訊則減少1點</li>
+						
 						<li>管理用戶無需設定寄送上限</li>
+						
 					</ul>
 				
 				<form action="module/adduser.php" method="post">
@@ -57,13 +58,10 @@
 							<td>信箱：</td>
 							<td><input type="email" name="email" required/></td>
 						</tr>
+						
 						<tr>
-							<td>每日傳送上限:</td>
-							<td><input type="number" name="sms_limit_day" min="0"/></td>
-						</tr>
-						<tr>
-							<td>總額度上限:(剩餘：<?=$_SESSION['setting']['total_credit'] ?>)</td>
-							<td><input type="number" name="sms_limit_total" min="0"/></td>
+							<td>總額度上限: <br />(剩餘：<?=$_SESSION['setting']['total_credit'] ?>)</td>
+							<td><input type="number" name="sms_limit_total" min="0" required/></td>
 						</tr>
 						<tr>
 							<td>等級</td>

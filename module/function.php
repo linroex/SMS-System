@@ -70,5 +70,16 @@
 		}
 	}
 	
-	
+	function phonenum_treat($phone){	//將手機號碼加上國碼
+		$result="";
+		if(strlen(trim($phone))>10){
+			$array_phone=explode(',',$phone);
+			foreach($array_phone as $temp){
+				$result.= ',886' .  substr( $temp,1,9);
+			}
+			return substr($result,1,strlen($result)-1);
+		}else{
+			return '886' . substr( $phone,1,9);
+		}
+	}
 ?>
