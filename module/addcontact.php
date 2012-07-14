@@ -7,7 +7,7 @@
 	}
 	$info=contact_info_check($_POST['name'],$_POST['nickname'],$_POST['email'],$_POST['phone'],$_POST['group'],$_POST['notice']);
 	if($contact->findOne(array('name'=>$info[0]))==NULL){
-		if($contact->insert(array('name'=>$info[0],'nickname'=>$info[1],'email'=>$info[2],'phone'=>$info[3],'group'=>$info[4],'notice'=>$info[5]))){
+		if($contact->insert(array('name'=>$info[0],'nickname'=>$info[1],'email'=>$info[2],'phone'=>$info[3],'group'=>$info[4],'notice'=>$info[5],'pertain'=>$_SESSION["user-info"]['usernm']))){
 			$_SESSION['add_contact_message']='新增聯絡人成功';
 		}else{
 			$_SESSION['add_contact_message']='失敗：'.$info;

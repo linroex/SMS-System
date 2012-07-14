@@ -37,7 +37,7 @@
 					<td style="width:55%;">備註</td>
 				</tr>
 				<?php 
-					foreach($group->find() as $temp){
+					foreach($group->find(array('pertain'=>$_SESSION["user-info"]['usernm'])) as $temp){
 						echo '<tr>
 							<td><a href="group_manager.php?edit_group=true&oldname=' . $temp['group_name'] . '">[編輯]</a></td>
 							<td>' . $temp['group_name'] . '</td>

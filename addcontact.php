@@ -43,7 +43,7 @@
 							<td>群組：</td>
 							<td>
 							<?php 
-								foreach($group->find(array()) as $temp){
+								foreach($group->find(array('pertain'=>$_SESSION["user-info"]['usernm'])) as $temp){
 									echo "<input type=\"checkbox\" name=\"group[]\" value=\"{$temp["group_name"]}\" />",$temp["group_name"],"<br />";
 								}	
 							?>

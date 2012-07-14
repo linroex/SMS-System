@@ -31,7 +31,7 @@
 						<td>
 							<?php 
 								$checked_count=0;
-								foreach($contact->find() as $temp){
+								foreach($contact->find(array('pertain'=>$_SESSION["user-info"]['usernm'])) as $temp){
 									if(@mb_strstr(is_array($temp['group'])?implode(',',$temp['group']):$temp['group'],$_GET['oldname'])){
 										echo '<input type="checkbox" name="group_member[]" value="'. $temp['name'] .'" checked/>' . $temp['name'] . '&nbsp&nbsp&nbsp';
 										$checked_count+=1;

@@ -13,7 +13,7 @@
 		
 		if(isset($_POST)){
 			if(isset($_POST['group_name'])){
-				$group->update(array('group_name'=>$_POST['group_name']),array('$set'=>array('group_name'=>$_POST['group_name'],'group_note'=>$_POST['group_note'])),true);		//增加群組
+				$group->update(array('group_name'=>$_POST['group_name']),array('$set'=>array('group_name'=>$_POST['group_name'],'group_note'=>$_POST['group_note'],"pertain"=>$_SESSION["user-info"]['usernm'])),true);		//增加群組
 				if(count($_POST['group_member'])>=$_SESSION['checked_count']){		//判斷是增加所屬群組還是減少所屬群組
 					
 					//如果增加群組，就直接把新的群組加到用戶資料上
@@ -21,7 +21,7 @@
 						$temp_contact_info=$contact->findOne(array('name'=>$temp));
 						$contact_group=(is_array($temp_contact_info['group'])?implode(',',$temp_contact_info['group']):$temp_contact_info['group']) . ',' . $_POST['group_name'];
 						unset($temp_contact_info);	
-						$contact->update(array('name'=>$temp),array('$set'=>array('group'=>explode(',',$contact_group))));
+						$contact->update(array('name'=>$temp),array('$set'=>array('group'=>explode(',',$contact_group),"pertain"=>$_SESSION["user-info"]['usernm'])));
 						$_SESSION['edit_group_message']='新增/編輯成功';
 					}
 				}else{
