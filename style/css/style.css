@@ -170,10 +170,10 @@ a {
     #login #submit:hover {
       color: red; }
 
-#edit-user, #addcontact, #group_manager {
-  width: 350px;
+#edit-user, #addcontact, #group_manager, #sendsms {
+  width: 380px;
   margin: 30px auto; }
-  #edit-user #submit, #addcontact #submit, #group_manager #submit {
+  #edit-user #submit, #addcontact #submit, #group_manager #submit, #sendsms #submit {
     width: 150px;
     height: 70px;
     font-size: 200%;

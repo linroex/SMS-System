@@ -58,7 +58,7 @@ class SMSHttp{
 			$this->processMsg = $resultString;
 		} else {
 			$success = true;
-			$strArray = split(",", $resultString);
+			$strArray = explode(",", $resultString);
 			$this->credit = $strArray[0];
 			$this->batchID = $strArray[4];
 		}

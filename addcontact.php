@@ -56,7 +56,7 @@
 							<?php 
 								if(@$contact_info==NULL){
 									foreach($group->find(array('pertain'=>array('$in'=>array('all',$_SESSION["user-info"]['usernm'])))) as $temp){
-										echo "<input type=\"checkbox\" name=\"group[]\" value=\"{$temp["group_name"]}\" />",$temp["group_name"],"<br />";
+										echo "<input type=\"checkbox\" name=\"group[]\" value=\"{$temp["group_name"]}\" />",$temp["group_name"],"&nbsp&nbsp&nbsp&nbsp";
 									}	
 								}else{
 									echo '群組調整請到<a href="group.php">「群組」</a>頁面進行設定';
