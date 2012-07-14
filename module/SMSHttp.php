@@ -62,7 +62,7 @@ class SMSHttp{
 			$this->credit = $strArray[0];
 			$this->batchID = $strArray[4];
 		}
-		return $success;
+		return $success . $strArray[4];
 	}
 	
 	function httpPost($url, $postData){

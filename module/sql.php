@@ -11,6 +11,7 @@
 	$group=$smsdb->group;
 	$contact=$smsdb->contact;
 	$_db_setting=$smsdb->setting;
+	$history=$smsdb->history;
 	$setting=$_db_setting->findOne();
 	$_SESSION["setting"]=$setting;
 
