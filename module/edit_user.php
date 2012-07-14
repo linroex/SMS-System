@@ -34,7 +34,7 @@
 					$users->update(array("_id"=>$_id),array('$set'=>array("usernm"=>$info[0],"passwd"=>$info[1],"nickname"=>$info[2],"email"=>$info[3],"day_limit"=>$info[5],"total_limit"=>$info[4],"level"=>$info[6])));
 					@$_SESSION['edit_user_status']='<script type="text/javascript">alert("修改成功！！");</script>';	
 				}else{@$_SESSION['edit_user_status']='<script type="text/javascript">alert("系統剩餘點數不足！！");</script>';}
-				$_SESSION["user-info"]=$login=$users->findOne(array("usernm"=>$_POST["usernm"]));	
+				//$_SESSION["user-info"]=$login=$users->findOne(array("usernm"=>$_POST["usernm"]));	
 			
 			}else{@$_SESSION['edit_user_status']='<script type="text/javascript">alert("' . $info .  ' ");</script>';}	
 		}else{@$_SESSION['edit_user_status']='<script type="text/javascript">alert("兩次密碼輸入不相同");</script>';}
