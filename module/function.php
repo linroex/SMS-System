@@ -16,6 +16,7 @@
 			$user_info[4]=(int)$user_info[4];
 			$user_info[5]=(int)$user_info[5];
 			$user_info[1]=md5($user_info[1]);
+			
 			return $user_info;
 		}else{
 			return $result;

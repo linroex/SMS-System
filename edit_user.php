@@ -1,6 +1,7 @@
 <?php include("templ/init.php");$_SESSION["page-title"]="編輯用戶";?>
 <?php 
-	if($_SESSION["user-info"]["level"]!="admin" and $_SESSION["user-info"]["usernm"]!=$_GET["usernm"]){
+	if($_SESSION["user-info"]["level"]!="admin"){
+		$_SESSION['permissions']='<script type="text/javascript">alert("您的權限不夠瀏覽此頁面！故將您自動送回首頁");</script>';
 		header("location: index.php");
 	}
 ?>

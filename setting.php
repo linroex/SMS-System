@@ -37,15 +37,15 @@
 					<table>
 						<tr>
 							<td>API Key：*</td>
-							<td><input type="text" name="sms_username" value="<?=$setting['sms_username']?>" required/></td>
+							<td><input type="text" name="sms_username" value="<?=@$setting['sms_username']?>" required/></td>
 						</tr>
 						<tr>
 							<td>API Secret：*</td>
-							<td><input type="password" name="sms_password" value="<?=$setting['sms_password']?>" required/></td>
+							<td><input type="password" name="sms_password" value="<?=@$setting['sms_password']?>" required/></td>
 						</tr>
 						<tr>
 							<td>發送者：*</td>
-							<td><input type="text" name="sms_from" value="<?=$setting['sms_from']?>" required/></td>
+							<td><input type="text" name="sms_from" value="<?=@$setting['sms_from']?>" required/></td>
 						</tr>
 						<center class="warning"><?php 
 							if(isset($_SESSION['setting_sms_error'])){
