@@ -8,7 +8,7 @@
 	<li>通訊錄
 		<ul>
 			<li><a href="addcontact.php">新增</a></li>
-			<li>檢視</li>
+			<li><a href="view_contact.php">檢視</a></li>
 			<li><a href="group.php">群組</a></li>
 			<li>匯入/匯出</li>
 		</ul>
