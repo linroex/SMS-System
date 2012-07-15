@@ -47,10 +47,10 @@
 				
 			</form>
 			<div id="viewsms">
-				<table>
+				<table cellpadding=1>
 					<tr>
 						<td>時間</td>
-						<td style="width:45%;">內容</td>
+						<td>內容</td>
 						<td>發送到</td>
 						<td>花費</td>
 						<td>字數</td>
@@ -68,10 +68,10 @@
 						foreach ($info_history as $temp){
 							echo '<tr>';
 							echo "<td>{$temp['time']}</td>
-							<td>{$temp['content']}</td>
-							<td>" . str_replace(',','',$temp['to']) . "</td>
+							<td><div style=\"width:350px;max-height:80px;overflow:auto;\">{$temp['content']}</div></td>
+							<td><div style=\"width:100px;max-height:50px;overflow:auto;\">" . str_replace(',','<br />',$temp['to']) . "</div></td>
 							<td>{$temp['cost']} point</td>
-							<td>" . mb_strlen($temp['content']) . "字</td>";
+							<td>" . mb_strlen($temp['content'],'UTF8') . "字</td>";
 							echo '</tr>';
 						} 
 						

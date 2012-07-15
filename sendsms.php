@@ -8,12 +8,13 @@
 	<?php include('module/sql.php')?>
 <script type="text/javascript">
     function Calculation(str) {
+       
         String.prototype.Blength = function() {
             var arr = this.match(/[^\x00-\xff]/ig);
             return arr == null ? this.length : this.length + arr.length;
         }
         var span = document.getElementById("txtCount");
-        span.innerHTML = str.value.Blength()
+        span.innerHTML = str.value.Blength();
         //字元數就是有幾個字，byte數就是洋文算1中文算2的總和
     }
 </script> 
