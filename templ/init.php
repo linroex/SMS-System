@@ -1,7 +1,7 @@
 <?php
 	
 	@session_start();
-	ini_set('session.gc_maxlifetime', 1200); 
+	ini_set('session.gc_maxlifetime', 2400); 
 	if(!strstr($_SERVER["PHP_SELF"],"index.php")){
 		if(@$_SESSION["login-status"]!=1){
 			if(!strstr($_SERVER["PHP_SELF"],"login.php")){

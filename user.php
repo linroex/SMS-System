@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
-	<?php include("templ/head.php");?>
+	<?php include("templ/head.php");include("module/sql.php");?>
 	<?php 
 		if(isset($_SESSION['edit_user_status'])){
 			echo $_SESSION['edit_user_status'];
@@ -39,7 +39,7 @@
 						<td>等級</td>
 					</tr>
 				<?php 
-					include("module/sql.php");
+					
 					
 					$result=$users->find();
 					foreach($result as $temp){

@@ -11,6 +11,12 @@
 	<meta charset="UTF-8">
 	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");?>
+	<?php 
+		if(isset($_SESSION['edit_user_status'])){
+			echo $_SESSION['edit_user_status'];
+			unset($_SESSION['edit_user_status']);
+		}
+	?>
 </head>
 <body>
 	
