@@ -69,7 +69,7 @@
 							echo '<tr>';
 							echo "<td>{$temp['time']}</td>
 							<td><div style=\"width:350px;max-height:80px;overflow:auto;\">{$temp['content']}</div></td>
-							<td><div style=\"width:100px;max-height:50px;overflow:auto;\">" . str_replace(',','<br />',$temp['to']) . "</div></td>
+							<td><div style=\"width:100px;max-height:80px;overflow:auto;\">" . str_replace(',','<br />',$temp['to']) . "</div></td>
 							<td>{$temp['cost']} point</td>
 							<td>" . mb_strlen($temp['content'],'UTF8') . "字</td>";
 							echo '</tr>';

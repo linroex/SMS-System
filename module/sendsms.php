@@ -24,12 +24,10 @@
 	
 	$user_point=$users->findOne(array('usernm'=>$_SESSION["user-info"]['usernm']),array('total_limit'=>true));
 	$user_point=$user_point['total_limit'];
+	$phone_num=floor(strlen($getmessage)/10);				//計算收件者數目
+	$sms_per=ceil(mb_strlen($_POST['content'],'UTF8')/70);	//計算內容的長度會寄出幾封簡訊
 	
-	$phone_num=explode(',',$getmessage);
-	$phone_num=count($phone_num);				//計算收件者數目
-	$sms_per=mb_strlen($_POST['content'],'UTF8')/70;	//計算內容的長度會寄出幾封簡訊
-	
-	if($user_point>=ceil($sms_per*$phone_num)){			//判斷寄出的簡訊所花的點數是否超過剩餘點數，避免點數出現負值
+	if($user_point>=$sms_per*$phone_num){			//判斷寄出的簡訊所花的點數是否超過剩餘點數，避免點數出現負值
 		
 		$sms=new NexmoMessage($_SESSION["setting"]['sms_username'],$_SESSION["setting"]['sms_password']);
 		
@@ -48,7 +46,7 @@
 		
 		include('credit_count.php');
 	}else{
-		$_SESSION['send_status']='發送失敗，可能是點數不足';
+		$_SESSION['send_status'].='發送失敗，可能是點數不足';
 	}
 	header('Location:../sendsms.php');
 	

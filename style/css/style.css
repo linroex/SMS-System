@@ -149,7 +149,7 @@ a {
     width: 80%;
     margin: 20px auto; }
   #viewuser tr:hover, #viewsms tr:hover {
-    color: red; }
+    color: #B7FF73; }
 
 #login {
   width: 450px;
