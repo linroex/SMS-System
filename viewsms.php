@@ -50,7 +50,7 @@
 				<table>
 					<tr>
 						<td>時間</td>
-						<td style="width:50%;">內容</td>
+						<td style="width:45%;">內容</td>
 						<td>發送到</td>
 						<td>花費</td>
 						<td>字數</td>

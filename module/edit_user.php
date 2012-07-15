@@ -1,12 +1,13 @@
 <?php 
+	session_start();
 	include("sql.php");
 	include("function.php");
-	session_start();
+	
 	
 	$_id=new MongoId($_POST["_id"]);
-	if(@$_POST["del_user"]=="del_user"){
+	if($_POST["del_user"]=="del_user"){
 		$users->remove(array("_id"=>$_id));
-		@$_SESSION['edit_user_status']='<script type="text/javascript">alert("移除完成！！");</script>';
+		$_SESSION['edit_user_status']='<script type="text/javascript">alert("移除完成！！");</script>';
 		
 		include('credit_count.php');
 		
