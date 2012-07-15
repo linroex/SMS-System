@@ -71,7 +71,7 @@
 							<td>{$temp['content']}</td>
 							<td>" . str_replace(',','',$temp['to']) . "</td>
 							<td>{$temp['cost']} point</td>
-							<td>" . strlen($temp['content']) . "字</td>";
+							<td>" . mb_strlen($temp['content']) . "字</td>";
 							echo '</tr>';
 						} 
 						

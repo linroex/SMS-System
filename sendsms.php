@@ -27,7 +27,23 @@
 							<td><textarea name="phone" cols="35" rows="4"></textarea></td>
 						</tr>
 						<tr>
-							<td>群組發送：</td>
+							<td>聯絡人：</td>
+							<td>
+								<?php 
+									foreach($contact->find(array('pertain'=>$_SESSION["user-info"]['usernm'])) as $temp){
+										echo "<input type=\"checkbox\" name=\"contact[]\" value=\"{$temp["phone"]}\" />",$temp["name"],"&nbsp&nbsp&nbsp&nbsp";
+									}	
+								?>
+							</td>
+						</tr>
+						
+						
+						<tr>
+							<td>內容：</td>
+							<td><textarea name="content" cols="35" rows="10" required></textarea></td>
+						</tr>
+						<tr>
+							<td>群組：</td>
 							<td>
 								<?php 
 									foreach($group->find(array('pertain'=>$_SESSION["user-info"]['usernm'])) as $temp){
@@ -35,11 +51,6 @@
 									}	
 								?>
 							</td>
-						</tr>
-						
-						<tr>
-							<td>內容：</td>
-							<td><textarea name="content" cols="35" rows="10" required></textarea></td>
 						</tr>
 				</table>
 				<center><input type="submit" value="發送" id="submit"/></td></center>

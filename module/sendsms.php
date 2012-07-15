@@ -4,7 +4,7 @@
 	include("NexmoMessage.php");
 	include("function.php");
 	
-	date_timezone_set('TW');
+	date_default_timezone_set('Asia/Taipei');		//時區設定
 	
 	$getmessage=isset($_POST['phone'])?trim($_POST['phone']):'';
 	if(isset($_POST['group'])){
@@ -12,7 +12,7 @@
 			$getmessage.=',' . $temp['phone'];
 		}
 	}
-	
+	$getmessage.=',' . implode(',',$_POST['contact']);
 	$sms=new NexmoMessage($_SESSION["setting"]['sms_username'],$_SESSION["setting"]['sms_password']);
 	$user_point=$users->findOne(array('usernm'=>$_SESSION["user-info"]['usernm']),array('total_limit'=>true));
 	$user_point=$user_point['total_limit'];
