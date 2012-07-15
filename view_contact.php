@@ -21,7 +21,7 @@
 		<div id="main">
 			<div class="title">檢視通訊錄</div>
 			<div id="viewuser">
-				
+				<center><a href="addcontact.php"><input type="button" value="新增聯絡人" /></a></center>
 				<table>
 					
 					<tr>
