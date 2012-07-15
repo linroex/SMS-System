@@ -30,7 +30,7 @@
 							<td>群組發送：</td>
 							<td>
 								<?php 
-									foreach($group->find(array('pertain'=>array('$in'=>array('all',$_SESSION["user-info"]['usernm'])))) as $temp){
+									foreach($group->find(array('pertain'=>$_SESSION["user-info"]['usernm'])) as $temp){
 										echo "<input type=\"checkbox\" name=\"group[]\" value=\"{$temp["group_name"]}\" />",$temp["group_name"],"&nbsp&nbsp&nbsp&nbsp";
 									}	
 								?>

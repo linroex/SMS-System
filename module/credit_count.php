@@ -4,7 +4,7 @@
 	session_start();
 	$sms=new NexmoAccount($_SESSION["setting"]['sms_username'],$_SESSION["setting"]['sms_password']);
 	$sms->balance();
-	$temp_point=(int)($sms->cache['balance']/0.011);
+	$temp_point=floor(($sms->cache['balance']/0.011));
 	
 	$x=$users->find(array(),array('total_limit'=>true));
 	$total_decrease=0;

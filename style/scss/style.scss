@@ -19,6 +19,7 @@ $menu-backcolor: #e0e0e0;
 body{
 	background: $back-color;
 	margin:0;	
+	font-size:微軟正黑體;
 }
 #body{
 	width:$body-width;
@@ -178,7 +179,7 @@ a{
 	text-align:center;
 }
 
-#viewuser{
+#viewuser,#viewsms{
 	table{
 		width:80%;
 		margin:20px auto;
