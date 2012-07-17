@@ -17,6 +17,9 @@
 			}
 		}
 	?>
+	<?php 
+		echo return_message('add_contact_message');
+	?>
 </head>
 <body>
 	
@@ -76,12 +79,7 @@
 						<input type="hidden" name="_id" value="<?=isset($_GET['conid'])?$_GET['conid']:'';?>"/>
 					</table>
 					<center><input type="submit" value="送出" id="submit" /></center>
-					<?php 
-						if(isset($_SESSION['add_contact_message'])){
-							echo '<script type="text/javascript">alert("'. $_SESSION['add_contact_message'] .'")</script>';
-							unset($_SESSION['add_contact_message']);
-						}
-					?>
+					
 				</form>
 			</div>
 		</div>

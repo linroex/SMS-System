@@ -46,14 +46,14 @@
 				<input type="submit" value="送出" /></p></center>
 				
 			</form>
-			<div id="viewsms">
+			<div id="view">
 				<table cellpadding=1>
 					<tr>
-						<td>時間</td>
-						<td>內容</td>
-						<td>發送到</td>
-						<td>花費</td>
-						<td>字數</td>
+						<td style="width:70px;">時間</td>
+						<td style="max-width:350px;">內容</td>
+						<td style="width:120px;">發送到</td>
+						<td style="width:50px;">花費</td>
+						<td style="width:50px;">字數</td>
 					</tr>
 					
 					<?php 
@@ -68,8 +68,8 @@
 						foreach ($info_history as $temp){
 							echo '<tr>';
 							echo "<td>{$temp['time']}</td>
-							<td><div style=\"width:350px;max-height:80px;overflow:auto;\">{$temp['content']}</div></td>
-							<td><div style=\"width:100px;max-height:80px;overflow:auto;\">" . str_replace(',','<br />',$temp['to']) . "</div></td>
+							<td><div style=\"max-height:80px;overflow:auto;\">{$temp['content']}</div></td>
+							<td><div style=\"max-height:80px;overflow:auto;\">" . str_replace(',','<br />',$temp['to']) . "</div></td>
 							<td>{$temp['cost']} point</td>
 							<td>" . mb_strlen($temp['content'],'UTF8') . "字</td>";
 							echo '</tr>';

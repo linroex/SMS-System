@@ -5,7 +5,9 @@
 	<meta charset="UTF-8">
 	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");?>
-	
+	<?php 
+		echo return_message('add_contact_message');
+	?>
 </head>
 <body>
 	
@@ -20,7 +22,7 @@
 		</div>
 		<div id="main">
 			<div class="title">檢視通訊錄</div>
-			<div id="viewuser">
+			<div id="view">
 				<center><a href="addcontact.php"><input type="button" value="新增聯絡人" /></a></center>
 				<table>
 					
@@ -54,11 +56,6 @@
 			</div>
 		</div>
 	</div>
-	<?php 
-		if(isset($_SESSION['add_contact_message'])){
-			echo '<script type="text/javascript">alert("'. $_SESSION['add_contact_message'] .'")</script>';
-			unset($_SESSION['add_contact_message']);
-		}
-	?>
+	
 </body>
 </html>

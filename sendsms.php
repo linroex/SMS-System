@@ -6,18 +6,21 @@
 	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");?>
 	<?php include('module/sql.php')?>
-<script type="text/javascript">
-    function Calculation(str) {
-       
-        String.prototype.Blength = function() {
-            var arr = this.match(/[^\x00-\xff]/ig);
-            return arr == null ? this.length : this.length + arr.length;
-        }
-        var span = document.getElementById("txtCount");
-        span.innerHTML = str.value.length;
-        //字元數就是有幾個字，byte數就是洋文算1中文算2的總和
-    }
-</script> 
+	<script type="text/javascript">
+	    function Calculation(str) {
+	       
+	        String.prototype.Blength = function() {
+	            var arr = this.match(/[^\x00-\xff]/ig);
+	            return arr == null ? this.length : this.length + arr.length;
+	        }
+	        var span = document.getElementById("txtCount");
+	        span.innerHTML = str.value.length;
+	        //字元數就是有幾個字，byte數就是洋文算1中文算2的總和
+	    }
+	</script> 
+	<?php 
+		echo return_message('send_status');
+	?>	
 </head>
 <body>
 	
@@ -37,7 +40,7 @@
 				<table>
 						<tr>
 							<td>收件者：</td>
-							<td><textarea name="phone" cols="35" rows="4"></textarea></td>
+							<td><textarea name="phone" cols="30" rows="4"></textarea></td>
 						</tr>
 						<tr>
 							<td>聯絡人：</td>
@@ -55,7 +58,7 @@
 						
 						<tr>
 							<td>內容：</td>
-							<td><textarea name="content" cols="35" rows="10" onkeyup="Calculation(this);" required></textarea><br/>已輸入：<span id="txtCount">0</span>字(有誤差)</td>
+							<td><textarea name="content" cols="30" rows="10" onkeyup="Calculation(this);" required></textarea><br/>已輸入：<span id="txtCount">0</span>字(有誤差)</td>
 						</tr>
 						
 												
@@ -76,11 +79,6 @@
 			</form>
 		</div>
 	</div>
-	<?php 
-		if(isset($_SESSION['send_status'])){
-			echo '<script type="text/javascript">alert("'. $_SESSION['send_status'] .'")</script>';
-			unset($_SESSION['send_status']);
-		}
-	?>	
+	
 </body>
 </html>

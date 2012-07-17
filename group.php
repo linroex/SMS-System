@@ -5,7 +5,9 @@
 	<meta charset="UTF-8">
 	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");include('module/sql.php');?>
-	
+	<?php 
+		echo return_message('edit_group_message');
+	?>
 </head>
 <body>
 	
@@ -23,14 +25,10 @@
 			
 			<br />
 			<center><a href="group_manager.php"><input type="button" value="新增群組" /></a></center>
-			<?php 
-				if(isset($_SESSION['edit_group_message'])){
-					echo '<script type="text/javascript">alert("' . $_SESSION['edit_group_message'] . '")</script>';
-					unset($_SESSION['edit_group_message']);
-				}
-			?>
+			
 			<br />
-			<table  id="group_view">
+			<div id="view" style="width:70%;margin:10px auto;">
+			<table >
 				<tr>
 					<td style="width:15%;"></td>
 					<td style="width:20%;">名稱</td>
@@ -47,6 +45,7 @@
 					}
 				?>
 			</table>
+			</div>
 		</div>
 	</div>
 	

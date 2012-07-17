@@ -83,4 +83,13 @@
 			return '886' . substr( $phone,1,9);
 		}
 	}
+	
+	function return_message($name){
+		if(isset($_SESSION[$name])){
+			$return=$_SESSION[$name];
+			unset($_SESSION[$name]);
+			return '<script type="text/javascript">alert("' . $return . '")</script>';
+		}
+	}
+	
 ?>

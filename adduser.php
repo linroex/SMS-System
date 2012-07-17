@@ -6,10 +6,8 @@
 	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");?>
 	<?php 
-		if(isset($_SESSION["adduser_result"])){
-			echo '<script type="text/javascript">alert("',$_SESSION["adduser_result"],'");</script>';
-			unset($_SESSION["adduser_result"]);
-		}
+		
+		echo return_message('adduser_result');
 	?>
 </head>
 <body>

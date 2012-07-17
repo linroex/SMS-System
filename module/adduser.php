@@ -30,6 +30,6 @@
 		$_SESSION["adduser_result"]=$info;
 	}
 
-	header("location:../adduser.php");
+	header("location:../user.php");
 	
 ?>

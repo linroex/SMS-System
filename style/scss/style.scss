@@ -19,7 +19,7 @@ $menu-backcolor: #e0e0e0;
 body{
 	background: $back-color;
 	margin:0;	
-	font-size:微軟正黑體;
+	font-family:微軟正黑體;
 }
 #body{
 	width:$body-width;
@@ -179,7 +179,7 @@ a{
 	text-align:center;
 }
 
-#viewuser,#viewsms{
+#view{
 	table{
 		width:80%;
 		margin:20px auto;
@@ -237,13 +237,6 @@ a{
 }
 .warning{
 	color:red;
-	
-}
-#group_view{
-	width:60%;margin:0 auto;
-	tr:hover{
-		color:red;
-	}
 	
 }
 #group_manager{

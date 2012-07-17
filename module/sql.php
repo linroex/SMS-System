@@ -8,7 +8,7 @@
 	}
 	$smsdb=$mongo->sms_system;
 	$users=$smsdb->users;
-	$group=$smsdb->group;
+	$group=$smsdb->contact_group;
 	$contact=$smsdb->contact;
 	$_db_setting=$smsdb->setting;
 	$history=$smsdb->history;

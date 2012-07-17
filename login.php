@@ -13,10 +13,7 @@
 		<div id="index-title"><a href="index.php"><?php echo $_SESSION["setting"]['site_name']; ?></a></div>
 		<div id="login">
 			<?php 
-				if(isset($_SESSION["login-status"])){
-					echo '<script type="text/javascript">alert("',$_SESSION["login-status"],'");</script>';
-					unset($_SESSION["login-status"]);
-				}
+				echo '<script type="text/javascript">alert("',return_message('edit_group_message'),'");</script>';
 			?>
 			<form action="module/login.php" method="post">
 				<p>帳號：<input type="text" name="usernm" size="10" required/><br />

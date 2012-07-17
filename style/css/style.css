@@ -3,7 +3,7 @@
 body {
   background: #99cccc;
   margin: 0;
-  font-size: 微軟正黑體; }
+  font-family: 微軟正黑體; }
 
 #body {
   width: 70%;
@@ -143,12 +143,12 @@ a {
   width: 100%;
   text-align: center; }
 
-#viewuser, #viewsms {
+#view {
   margin-top: 25px; }
-  #viewuser table, #viewsms table {
+  #view table {
     width: 80%;
     margin: 20px auto; }
-  #viewuser tr:hover, #viewsms tr:hover {
+  #view tr:hover {
     color: #B7FF73; }
 
 #login {
@@ -191,12 +191,6 @@ a {
 
 .warning {
   color: red; }
-
-#group_view {
-  width: 60%;
-  margin: 0 auto; }
-  #group_view tr:hover {
-    color: red; }
 
 #group_manager {
   width: 400px; }

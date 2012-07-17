@@ -7,7 +7,7 @@
 	$_id=new MongoId($_POST["_id"]);
 	if($_POST["del_user"]=="del_user"){
 		$users->remove(array("_id"=>$_id));
-		$_SESSION['edit_user_status']='<script type="text/javascript">alert("移除完成！！");</script>';
+		$_SESSION['edit_user_status']='移除完成！！';
 		
 		include('credit_count.php');
 		
@@ -30,23 +30,23 @@
 					$_db_setting->update(array('check'=>'999'),array('$set'=>array('total_credit'=>$_SESSION['setting']['total_credit']+$balance)));
 					$_SESSION['setting']['total_credit']+=$balance;
 					$users->update(array("_id"=>$_id),array('$set'=>array("usernm"=>$info[0],"passwd"=>$info[1],"nickname"=>$info[2],"email"=>$info[3],"day_limit"=>$info[5],"total_limit"=>$info[4],"level"=>$info[6])));
-					@$_SESSION['edit_user_status']='<script type="text/javascript">alert("修改成功！！");</script>';	
+					@$_SESSION['edit_user_status']='修改成功！！';	
 				}elseif($old_userinfo['total_limit']<$info[4] and $info[4]>=0 and $_SESSION['setting']['total_credit']>=$balance){
 					$_db_setting->update(array('check'=>'999'),array('$set'=>array('total_credit'=>$_SESSION['setting']['total_credit']-$balance)));
 					$_SESSION['setting']['total_credit']-=$balance;
 					$users->update(array("_id"=>$_id),array('$set'=>array("usernm"=>$info[0],"passwd"=>$info[1],"nickname"=>$info[2],"email"=>$info[3],"total_limit"=>$info[4],"level"=>$info[6])));
-					@$_SESSION['edit_user_status']='<script type="text/javascript">alert("修改成功！！");</script>';	
+					@$_SESSION['edit_user_status']='修改成功！！';	
 				}elseif($old_userinfo['total_limit']==$info[4]){
 					
 					$users->update(array("_id"=>$_id),array('$set'=>array("usernm"=>$info[0],"passwd"=>$info[1],"nickname"=>$info[2],"email"=>$info[3],"total_limit"=>$info[4],"level"=>$info[6])));
-					@$_SESSION['edit_user_status']='<script type="text/javascript">alert("修改成功！！");</script>';	
+					@$_SESSION['edit_user_status']='修改成功！！';	
 					
-				}else{@$_SESSION['edit_user_status']='<script type="text/javascript">alert("系統剩餘點數不足！！");</script>';}
+				}else{@$_SESSION['edit_user_status']='系統剩餘點數不足！！';}
 			
-			}else{@$_SESSION['edit_user_status']='<script type="text/javascript">alert("' . $info .  ' ");</script>';}	
-		}else{@$_SESSION['edit_user_status']='<script type="text/javascript">alert("兩次密碼輸入不相同");</script>';}
+			}else{@$_SESSION['edit_user_status']=$info;}	
+		}else{@$_SESSION['edit_user_status']='兩次密碼輸入不相同';}
 		
-		header("location: ../edit_user.php?usernm={$_POST["usernm"]}");
+		header("location: ../user.php");
 	}
 
 ?>

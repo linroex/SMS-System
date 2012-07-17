@@ -5,7 +5,10 @@
 	<meta charset="UTF-8">
 	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");include("module/sql.php");?>
-	
+	<?php 
+		$setting=$_db_setting->findOne();
+		echo $return_message('edit_user_status');
+	?>
 </head>
 <body>
 	
@@ -20,13 +23,7 @@
 		</div>
 		<div id="main">
 			<div class="title">系統設定</div>
-			<?php 
-				$setting=$_db_setting->findOne();
-				if(isset($_SESSION['setting_result'])){
-					echo $_SESSION['setting_result'];
-					unset($_SESSION['setting_result']);
-				}
-			?>
+			
 			<div id="setting">
 				
 				<a target="_blank" href="module/credit_count.php"><input type="button" value="手動計算可用點數"/></a>
@@ -51,7 +48,8 @@
 							if(isset($_SESSION['setting_sms_error'])){
 								echo $_SESSION['setting_sms_error'];
 								unset($_SESSION['setting_sms_error']);
-							}?></center>
+							}?>
+						</center>
 					</table>
 					
 					<p>二、網站設定</p>

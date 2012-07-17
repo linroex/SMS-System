@@ -9,13 +9,13 @@
 		
 	if($_db_setting->update(array('check'=>'999'),array('$set'=>array('sms_username'=>$setting_info[0],'sms_password'=>$setting_info[1],'site_name'=>$setting_info[2],'login_error_limit'=>$setting_info[3],'sms_from'=>$_POST['sms_from'])))){
 		include("credit_count.php");
-		$_SESSION['setting_result']='<script type="text/javascript">alert("設定修改成功");</script>';	
+		$_SESSION['setting_result']='設定修改成功';	
 		$setting=$_db_setting->findOne();
 		$_SESSION["setting"]=$setting;
 		unset($setting);
 		
 	}else{
-		$_SESSION['setting_result']='<script type="text/javascript">alert("設定修改失敗");</script>';
+		$_SESSION['setting_result']='設定修改失敗';
 	}
 	$sms=new NexmoAccount($_SESSION["setting"]['sms_username'],$_SESSION["setting"]['sms_password']);
 	
