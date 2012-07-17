@@ -21,8 +21,10 @@
 						$contact_group=(is_array($temp_contact_info['group'])?implode(',',$temp_contact_info['group']):$temp_contact_info['group']) . ',' . $_POST['group_name'];
 						unset($temp_contact_info);	
 						$contact->update(array('name'=>$temp),array('$set'=>array('group'=>explode(',',$contact_group),"pertain"=>$_SESSION["user-info"]['usernm'])));
-						$_SESSION['edit_group_message']='新增/編輯成功';
+						
+						
 					}
+					$_SESSION['edit_group_message']='新增/編輯成功';
 				}else{
 					
 					//如果是減少群組，則要檢查是哪個用戶要檢查群組，然後再去修改
@@ -40,9 +42,10 @@
 							}
 							
 							$contact->update(array('name'=>$temp['name']),array('$set'=>array('group'=>$new_contact_group)));
-							$_SESSION['edit_group_message']='新增/編輯成功';
+							
 							
 						}
+						$_SESSION['edit_group_message']='新增/編輯成功';
 					}
 				}
 			}

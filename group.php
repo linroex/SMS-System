@@ -7,6 +7,7 @@
 	<?php include("templ/head.php");include('module/sql.php');?>
 	<?php 
 		echo return_message('edit_group_message');
+		
 	?>
 </head>
 <body>
