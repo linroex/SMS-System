@@ -44,6 +44,13 @@
 							<td>發送者：*</td>
 							<td><input type="text" name="sms_from" value="<?=@$setting['sms_from']?>" required/></td>
 						</tr>
+						<tr>
+							<td>發送設定：</td>
+							<td> 
+								<input type="radio" name="sms_from_set" value="system" <? echo @$setting['sms_from_set']=='system'?'checked':'';?> />系統設定<br />
+								<input value="user" type="radio" name="sms_from_set" <? echo @$setting['sms_from_set']=='user'?'checked':'';?> />使用者設定
+							</td>
+						</tr>
 						<center class="warning"><?php 
 							if(isset($_SESSION['setting_sms_error'])){
 								echo $_SESSION['setting_sms_error'];

@@ -12,7 +12,7 @@
 			
 			
 				if($info[4]<=$_SESSION['setting']['total_credit']){
-				$users->insert(array("nickname"=>$info[2],"usernm"=>$info[0],"passwd"=>$info[1],"email"=>$info[3],"day_limit"=>$info[5],"total_limit"=>$info[4],"level"=>$info[6]));
+				$users->insert(array("nickname"=>$info[2],"usernm"=>$info[0],"passwd"=>$info[1],"email"=>$info[3],"day_limit"=>$info[5],"total_limit"=>$info[4],"level"=>$info[6],'phone'=>trim($_POST['phone'])));
 				$group->insert(array("group_name"=>"未分類","pertain"=>$info[0]));
 				$_SESSION["edit_user_status"]="帳號{$info[0]}新增成功";	
 				$_db_setting->update(array('check'=>'999'),array('$set'=>array('total_credit'=>$_SESSION['setting']['total_credit']-$info[4])));

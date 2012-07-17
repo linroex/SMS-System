@@ -52,7 +52,7 @@
 						<td style="width:70px;">時間</td>
 						<td style="max-width:350px;">內容</td>
 						<td style="width:120px;">發送到</td>
-						<td style="width:50px;">花費</td>
+						<td style="width:65px;">花費</td>
 						<td style="width:50px;">字數</td>
 					</tr>
 					

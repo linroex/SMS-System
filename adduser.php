@@ -56,7 +56,10 @@
 							<td>信箱：</td>
 							<td><input type="email" name="email" required/></td>
 						</tr>
-						
+						<tr>
+							<td>手機：</td>
+							<td><input type="text" name="phone" /></td>
+						</tr>
 						<tr>
 							<td>總額度上限: <br />(剩餘：<?=$_SESSION['setting']['total_credit'] ?>)</td>
 							<td><input type="number" name="sms_limit_total" min="0" required/></td>

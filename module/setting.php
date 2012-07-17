@@ -7,7 +7,7 @@
 	$setting_info=setting_check_info($_POST['sms_username'],$_POST['sms_password'],$_POST['site_name'],$_POST['login_error_limit'],$_POST['captcha']);
 	
 		
-	if($_db_setting->update(array('check'=>'999'),array('$set'=>array('sms_username'=>$setting_info[0],'sms_password'=>$setting_info[1],'site_name'=>$setting_info[2],'login_error_limit'=>$setting_info[3],'sms_from'=>$_POST['sms_from'])))){
+	if($_db_setting->update(array('check'=>'999'),array('$set'=>array('sms_username'=>$setting_info[0],'sms_password'=>$setting_info[1],'site_name'=>$setting_info[2],'login_error_limit'=>$setting_info[3],'sms_from'=>trim($_POST['sms_from']),'sms_from_set'=>$_POST['sms_from_set'])))){
 		include("credit_count.php");
 		$_SESSION['setting_result']='設定修改成功';	
 		$setting=$_db_setting->findOne();
