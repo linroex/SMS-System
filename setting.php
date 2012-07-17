@@ -7,7 +7,7 @@
 	<?php include("templ/head.php");include("module/sql.php");?>
 	<?php 
 		$setting=$_db_setting->findOne();
-		echo $return_message('edit_user_status');
+		echo return_message('setting_result');
 	?>
 </head>
 <body>

@@ -6,7 +6,7 @@
 	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");include("module/sql.php");?>
 	<?php 
-
+		
 		echo return_message('edit_user_status');
 	?>
 </head>

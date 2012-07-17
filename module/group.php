@@ -1,7 +1,6 @@
 <?php 
-	include("sql.php");
-	include("function.php");
 	include("../templ/init.php");
+	include("sql.php");	
 	
 	if($_POST['del_group']=='true'){
 		$group->remove(array('group_name'=>$_POST['group_name']));

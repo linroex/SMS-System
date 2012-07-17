@@ -36,9 +36,10 @@
 				</tr>
 				<?php 
 					foreach($group->find(array('pertain'=>$_SESSION["user-info"]['usernm'])) as $temp){
+						
 						$temp['group_note']=isset($temp['group_note'])?$temp['group_note']:'';
 						echo '<tr>
-							<td><a href="group_manager.php?edit_group=true&oldname=' . $temp['group_name'] . '">[編輯]</a></td>
+							<td><a href="group_manager.php?edit_group=true&oldname=' . $temp['group_name'] . '&oldnote=' . $temp['group_note'] . '">[編輯]</a></td>
 							<td>' . $temp['group_name'] . '</td>
 							<td>' . $temp['group_note'] . '</td>
 						</tr>';
