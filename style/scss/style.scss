@@ -8,6 +8,7 @@ $title-color: #4a4a4a;
 $menu-color: #4a4a4a;
 $text-color:#f5f5f5;
 $menu-backcolor: #e0e0e0;
+$tr_hover_color: #B7FF73;
 
 @mixin box-center{
 	margin:0 auto;
@@ -66,7 +67,21 @@ body{
 	width:22%;
 	@include height(695px);
 	float:right;
-	
+	.wel{
+		text-align:center;
+		font-weight:bold;
+	}
+	#dash{
+		margin-left:10px;
+		margin-right:10px;
+		.profile{
+			text-align:center;
+			a:hover{
+				color:$tr_hover_color;
+			}
+		}
+		
+	}
 	
 }
 #index-title{
@@ -181,13 +196,13 @@ a{
 
 #view{
 	table{
-		width:80%;
+		width:90%;
 		margin:20px auto;
 		
 	}
 	margin-top:25px;
 	tr:hover{
-		color:#B7FF73;
+		color:$tr_hover_color;
 	}
 }
 #login{
@@ -226,6 +241,9 @@ a{
 		margin-top:10px;
 		border-radius:5px;
 		border:0px;
+		&:hover{
+			color:red;
+		}
 	}
 }
 #setting{

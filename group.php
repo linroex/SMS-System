@@ -26,7 +26,6 @@
 			
 			<br />
 			<center><a href="group_manager.php"><input type="button" value="新增群組" /></a></center>
-			
 			<br />
 			<div id="view" style="width:70%;margin:10px auto;">
 			<table >

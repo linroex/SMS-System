@@ -45,6 +45,16 @@ body {
   width: 22%;
   min-height: 695px;
   float: right; }
+  #slider .wel {
+    text-align: center;
+    font-weight: bold; }
+  #slider #dash {
+    margin-left: 10px;
+    margin-right: 10px; }
+    #slider #dash .profile {
+      text-align: center; }
+      #slider #dash .profile a:hover {
+        color: #b7ff73; }
 
 #index-title {
   font-size: 330%;
@@ -146,10 +156,10 @@ a {
 #view {
   margin-top: 25px; }
   #view table {
-    width: 80%;
+    width: 90%;
     margin: 20px auto; }
   #view tr:hover {
-    color: #B7FF73; }
+    color: #b7ff73; }
 
 #login {
   width: 450px;
@@ -182,6 +192,8 @@ a {
     margin-top: 10px;
     border-radius: 5px;
     border: 0px; }
+    #edit-user #submit:hover, #addcontact #submit:hover, #group_manager #submit:hover, #sendsms #submit:hover {
+      color: red; }
 
 #setting {
   width: 60%;

@@ -2,13 +2,14 @@
 	include("sql.php");
 	include("../templ/init.php");
 	
-	
+	date_default_timezone_set('Asia/Taipei');		//時區設定
 	$login=$users->findOne(array("usernm"=>$_POST["usernm"]));
 	
 	if(md5(trim($_POST["passwd"]))==$login["passwd"]){
 		
 		$_SESSION["user-info"]=$login;
 		$_SESSION["login-status"]=1;
+		$users->update(array("_id"=>new MongoId($_SESSION["user-info"]['_id'])),array('$set'=>array('previous_login'=>date("Y/m/d H:i"))));
 		header("location:../index.php");
 
 	}else{

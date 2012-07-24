@@ -58,7 +58,7 @@
 						</tr>
 						<tr>
 							<td>手機：</td>
-							<td><input type="text" name="phone" /></td>
+							<td><input type="tel" name="phone" /></td>
 						</tr>
 						<tr>
 							<td>總額度上限: <br />(剩餘：<?=$_SESSION['setting']['total_credit'] ?>)</td>
@@ -69,6 +69,7 @@
 							<td><select name="level" id=""><option value="normal">normal</option>
 							<option value="admin">admin</option></select></td>
 						</tr>
+						<input type="hidden" name="check" value="<?=floor(time()/240) ?>"/>
 						<input type="submit" id="submit" value="送出"/>
 						
 					</table>					

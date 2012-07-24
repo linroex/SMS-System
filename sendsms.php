@@ -75,6 +75,7 @@
 							</td>
 						</tr>
 				</table>
+				<input type="hidden" name="check" value="<?=floor(time()/600) ?>"/>
 				<center><input type="submit" value="發送" id="submit"/></td></center>
 			</form>
 		</div>

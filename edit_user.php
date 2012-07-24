@@ -73,7 +73,7 @@
 							</tr>
 							<tr>
 								<td>手機：</td>
-								<td><input type=\"text\" name=\"phone\" value=\"{$userinfo["phone"]}\" /></td>
+								<td><input type=\"tel\" name=\"phone\" value=\"{$userinfo["phone"]}\" /></td>
 							</tr>
 							<tr>
 								<td>總額度限制：<br />(剩餘：{$_SESSION['setting']['total_credit']})</td>
@@ -99,6 +99,7 @@
 						}
 						
 					?>
+					<input type="hidden" name="check" value="<?=floor(time()/240) ?>"/>
 					<tr><td colspan="2" align="center"><input id="submit" type="submit" value="送出" /></td><td></td></tr>
 					</table>
 				</form>
