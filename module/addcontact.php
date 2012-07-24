@@ -17,7 +17,6 @@
 		}else{
 			$_SESSION['add_contact_message']='已有同名稱聯絡人';
 		}
-		
 	}else{
 		$conid=new 	MongoId($_POST['_id']);
 		if($_POST['del_contact']=='true'){
@@ -30,8 +29,8 @@
 				$_SESSION['add_contact_message']='失敗：'.$info;
 			}
 		}
-		
 	}
+	
 	header("Location:../view_contact.php");
 	
 ?>

@@ -6,7 +6,6 @@
 	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");?>
 	<?php 
-		
 		echo return_message('adduser_result');
 	?>
 </head>

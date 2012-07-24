@@ -42,8 +42,7 @@
 							}
 							
 							$contact->update(array('name'=>$temp['name']),array('$set'=>array('group'=>$new_contact_group)));
-							
-							
+
 						}
 						$_SESSION['edit_group_message']='新增/編輯成功';
 					}
@@ -51,5 +50,6 @@
 			}
 		}
 	}
+	
 	header("Location:../group.php");
 ?>
