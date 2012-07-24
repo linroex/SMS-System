@@ -1,4 +1,5 @@
 <?php
+
 	function process_user_info($usernm,$passwd,$nickname,$email,$total_limit="",$day_limit="",$level=normal){
 		$user_info=array($usernm,$passwd,$nickname,$email,$total_limit,$day_limit,$level);
 		for($i=0;$i<count($user_info);$i++){
@@ -20,8 +21,7 @@
 			return $user_info;
 		}else{
 			return $result;
-		}
-			
+		}		
 	}
 	
 	function setting_check_info($smsname,$smspasswd,$sitename,$errorlimit=-1,$captcha=false){

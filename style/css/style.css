@@ -47,10 +47,11 @@ body {
   float: right; }
   #slider .wel {
     text-align: center;
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 200%; }
   #slider #dash {
-    margin-left: 10px;
-    margin-right: 10px; }
+    margin-left: 15px;
+    margin-right: 15px; }
     #slider #dash .profile {
       text-align: center; }
       #slider #dash .profile a:hover {
@@ -183,7 +184,8 @@ a {
       color: red; }
 
 #edit-user, #addcontact, #group_manager, #sendsms {
-  width: 380px;
+  width: 350px;
+  min-width: 350px;
   margin: 30px auto; }
   #edit-user #submit, #addcontact #submit, #group_manager #submit, #sendsms #submit {
     width: 150px;

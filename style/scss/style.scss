@@ -70,10 +70,11 @@ body{
 	.wel{
 		text-align:center;
 		font-weight:bold;
+		font-size:200%;
 	}
 	#dash{
-		margin-left:10px;
-		margin-right:10px;
+		margin-left:15px;
+		margin-right:15px;
 		.profile{
 			text-align:center;
 			a:hover{
@@ -232,7 +233,8 @@ a{
 		margin-bottom:20px;
 	}
 }#edit-user,#addcontact,#group_manager,#sendsms{
-	width:380px;
+	width:350px;
+	min-width:350px;
 	margin:30px auto;
 	#submit{
 		width:150px;
