@@ -78,6 +78,7 @@
 						<input type="hidden" name="editorcreate" value="<?=@$contact_info==NULL?'false':'true'; ?>"/>
 						<input type="hidden" name="_id" value="<?=isset($_GET['conid'])?$_GET['conid']:'';?>"/>
 					</table>
+					<input type="hidden" name="check" value="<?php srand(time());$_SESSION['check']=rand(10000000,99999999); echo $_SESSION['check'] ?>"/>
 					<center><input type="submit" value="送出" id="submit" /></center>
 					
 				</form>

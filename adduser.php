@@ -68,7 +68,7 @@
 							<td><select name="level" id=""><option value="normal">normal</option>
 							<option value="admin">admin</option></select></td>
 						</tr>
-						<input type="hidden" name="check" value="<?=floor(time()/240) ?>"/>
+						<input type="hidden" name="check" value="<?php srand(time());$_SESSION['check']=rand(10000000,99999999); echo $_SESSION['check'] ?>"/>
 						<input type="submit" id="submit" value="送出"/>
 						
 					</table>					

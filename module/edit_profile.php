@@ -2,7 +2,8 @@
 	session_start();
 	include('sql.php');
 	
-	if($_POST['check']==floor(time()/240)){
+	if($_POST['check']==$_SESSION['check']){
+		unset($_SESSION['check']);
 		if(trim($_POST['passwd'])==''){
 			$users->update(array('_id'=>new MongoId($_SESSION['user-info']['_id'])),array('$set'=>array('nickname'=>trim($_POST['nickname']),'email'=>trim($_POST['email']))));
 			$_SESSION['edit_porfile_status']='修改成功';
@@ -14,7 +15,7 @@
 		}
 	
 	}else{
-		$_SESSION['edit_porfile_status']='請勿嘗試攻擊本系統';
+		$_SESSION['edit_porfile_status']='檢核碼錯誤，請勿嘗試攻擊本系統';
 	}
 	
 	$temp=$_SESSION['user-info']['previous_login'];

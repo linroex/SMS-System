@@ -2,7 +2,8 @@
 	include("sql.php");
 	include("../templ/init.php");
 	include("function.php");
-	if($_POST['check']==floor(time()/240)){		//防止惡意攻擊，檢查檢核碼
+	if($_POST['check']==$_SESSION['check']){		//防止惡意攻擊，檢查檢核碼
+		unset($_SESSION['check']);		
 		if(is_array($info=process_user_info($_POST["username"],$_POST["passwd"],$_POST["nickname"],$_POST["email"],$_POST["sms_limit_total"],$_POST["sms_limit_day"],$_POST["level"]))){
 			$check_same_user=$users->findOne(array("usernm"=>$info[0]));
 			if($info[0]==$check_same_user["usernm"]){
@@ -22,7 +23,7 @@
 			$_SESSION["edit_user_status"]=$info;
 		}
 	}else{
-		$_SESSION["edit_user_status"]='檢核碼不正確，可能是編輯時間過久';
+		$_SESSION["edit_user_status"]='檢核碼錯誤，請勿嘗試攻擊本系統';
 	}
 	
 	header("location:../user.php");

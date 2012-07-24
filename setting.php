@@ -71,6 +71,7 @@
 						</tr>
 						
 					</table>
+					<input type="hidden" name="check" value="<?php srand(time());$_SESSION['check']=rand(10000000,99999999); echo $_SESSION['check'] ?>"/>
 					<input type="submit" value="儲存設定"/>
 				</form>
 			</div>

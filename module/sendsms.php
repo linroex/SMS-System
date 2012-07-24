@@ -4,7 +4,8 @@
 	include("NexmoMessage.php");
 	include("function.php");
 	
-	if($_POST['check']==floor(time()/600)){
+	if($_POST['check']==$_SESSION['check']){
+		unset($_SESSION['check']);
 		date_default_timezone_set('Asia/Taipei');		//時區設定
 		
 		//將收件者、聯絡人、群組的手機號碼整合成字串
@@ -50,10 +51,10 @@
 			
 			include('credit_count.php');
 		}else{
-			$_SESSION['send_status'].='發送失敗，可能是點數不足';
+			$_SESSION['send_status']='發送失敗，可能是點數不足';
 		}
 	}else{
-		$_SESSION['send_status']='檢核碼不正確，可能是編輯時間過久';
+		$_SESSION['send_status']='檢核碼不正確，請勿嘗試攻擊本系統';
 	}
 	header('Location:../sendsms.php');
 	

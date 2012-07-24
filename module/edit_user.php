@@ -3,7 +3,9 @@
 	include("sql.php");
 	include("function.php");
 	
-	if($_POST['check']==floor(time()/240)){
+	if($_POST['check']==$_SESSION['check']){
+		unset($_SESSION['check']);
+		
 		$_id=new MongoId($_POST["_id"]);
 		if($_POST["del_user"]=="del_user"){
 			$users->remove(array("_id"=>$_id));
@@ -47,7 +49,7 @@
 			}else{$_SESSION['edit_user_status']='兩次密碼輸入不相同';}
 		}
 	}else{
-		$_SESSION['edit_user_status']='檢核碼不正確，可能是編輯時間過久';
+		$_SESSION['edit_user_status']='檢核碼錯誤，請勿嘗試攻擊本系統';
 	}
 	header("location: ../user.php");
 ?>

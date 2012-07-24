@@ -48,7 +48,7 @@
 						<td>信箱:</td>
 						<td><input type="text" name="email" value="<?=$_SESSION['user-info']['email'] ?>" required/></td>
 					</tr>
-					<input type="hidden" name="check" value="<?=floor(time()/240) ?>"/>
+					<input type="hidden" name="check" value="<?php srand(time());$_SESSION['check']=rand(10000000,99999999); echo $_SESSION['check'] ?>"/>
 					<tr><td colspan="2" align="center"><input id="submit" type="submit" value="送出" /></td><td></td></tr>
 					</table>
 				</form>

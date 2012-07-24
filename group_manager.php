@@ -52,7 +52,7 @@
 						<td>[移除<input type="radio" name="del_group" value="true"/>][不移除<input type="radio" name="del_group" value="false" checked/>]</td>
 					</tr>
 					<input type="hidden" name="check" value="<?php echo (isset($_GET['edit_group']) and $_GET['edit_group']=='true')?'true':"false";?>" />
-					
+					<input type="hidden" name="CHECK" value="<?php srand(time());$_SESSION['CHECK']=rand(10000000,99999999); echo $_SESSION['CHECK'] ?>"/>
 					<tr><td colspan=2><center><input type="submit" id="submit" value="送出"/></center></td><td></td></tr>
 				</table>
 				

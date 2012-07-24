@@ -75,7 +75,7 @@
 							</td>
 						</tr>
 				</table>
-				<input type="hidden" name="check" value="<?=floor(time()/600) ?>"/>
+				<input type="hidden" name="check" value="<?php srand(time());$_SESSION['check']=rand(10000000,99999999); echo $_SESSION['check'] ?>"/>
 				<center><input type="submit" value="發送" id="submit"/></td></center>
 			</form>
 		</div>
