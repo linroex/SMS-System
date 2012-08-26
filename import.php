@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title><?php echo $_SESSION["setting"]['site_name']," | ",@$_SESSION["page-title"]; ?></title>
 	<?php include("templ/head.php");?>
-
+	
 </head>
 <body>
 	
@@ -20,7 +20,13 @@
 		</div>
 		<div id="main">
 			<div class="title">匯入/匯出</div>
-			
+			<center>
+				<p>此處接受Google CSV格式的聯絡人匯入</p>
+			</center>
+			<form action="module/import.php" method="post" enctype="multipart/form-data">
+				<input type="file" name="import" />
+				<input type="submit" value="上傳" />
+			</form>
 		</div>
 	</div>
 	

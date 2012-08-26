@@ -7,7 +7,9 @@
 	<?php include("templ/head.php");?>
 	<?php 
 		echo return_message('add_contact_message');
+		echo return_message('import_status');
 	?>
+	
 </head>
 <body>
 	
