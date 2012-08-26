@@ -1,4 +1,4 @@
-<?php include("templ/init.php");$_SESSION["page-title"]="匯入匯出";?>
+<?php include("templ/init.php");$_SESSION["page-title"]="匯入";?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>

@@ -10,7 +10,7 @@
 			<li><a href="addcontact.php">新增</a></li>
 			<li><a href="view_contact.php">檢視</a></li>
 			<li><a href="group.php">群組</a></li>
-			<li><a href="imexport.php">匯入/匯出</a></li>
+			<li><a href="imexport.php">匯入</a></li>
 		</ul>
 	</li>
 	<li><a>會員管理</a>

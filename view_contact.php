@@ -23,7 +23,7 @@
 		<div id="main">
 			<div class="title">檢視通訊錄</div>
 			<div id="view">
-				<center><a href="addcontact.php"><input type="button" value="新增聯絡人" /></a></center>
+				<center><a href="addcontact.php"><input type="button" value="新增聯絡人" /></a><a href="module/del_all_contact.php"><input type="button" value="刪除所有聯絡人" /></a></center>
 				<table>
 					
 					<tr>
